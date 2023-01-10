@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
-
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/services/userservice/user.service';
 
 @Component({
   selector: 'app-signin',
@@ -13,7 +13,7 @@ export class SigninComponent implements OnInit {
   signinForm!: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private user: UserService, private route: Router) { }
 
   ngOnInit(): void {
 
@@ -25,25 +25,26 @@ export class SigninComponent implements OnInit {
   // convenience getter for easy access to form fields
   // get f() { return this. signinForm.controls;}
 
-  get f() { return this.signinForm.controls; }
-
   onSubmit() {
-      this.submitted = true;
+    this.submitted = true;
+    if (this.signinForm.valid) {
+      console.log(this.signinForm.value);
 
-      // stop here if form is invalid
-      if (this.signinForm.invalid) {
-          return;
+      let signinobject = {
+        email: this.signinForm.value.email,
+        password: this.signinForm.value.password
       }
+      this.user.userSignin(signinobject).subscribe((response: any) => {
+        console.log("*****Login Successfull*****",response);
+        localStorage.setItem('token',response.data)
 
-      // display form values on success
-      alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.signinForm.value, null, 4));
+      
+      })
+
+    } else {
+      console.log("enter data");
+    }
   }
-
-  onReset() {
-      this.submitted = false;
-      this.signinForm.reset();
-  }
-
 
 }
 

@@ -1,0 +1,39 @@
+<div  fxLayout="row wrap" fxLayoutGap="20px grid" style="padding-top: 5%; padding-left: 10%;" >
+
+   <div *ngFor="let note1 of notesArraylist;"  > 
+     
+    <mat-card class="example-card" [style.background]="note1.color" >  <!--this .color is coming from backend and is used -->
+      <!-- <mat-card-header> -->
+        <mat-card-title (click)="openDialog(note1)" >
+          <!-- title -->
+          {{note1.title }} <!-- .title is coming from backend api & string interpolation is used here which shows us data in string in browser -->
+          
+
+          <button class="pinbutton" >
+            <img class="pin" src="../../../assets/push_pin_black_24dp.svg" alt="">
+  
+          </button>
+        </mat-card-title>
+
+       
+
+        <mat-card-subtitle (click)="openDialog(note1)" >
+          <!-- description -->
+          {{ note1.description }}  <!-- .description is coming from backend api-->
+        </mat-card-subtitle>
+        
+      <!-- </mat-card-header> -->
+      
+      <mat-card-content class="matcardicons">
+          <app-icons [notecard]="note1" (changeColorOfNote)="messageReceivedFromNote($event)" ></app-icons>    <!--this is used for data sharing between icons and displaynotes & is child of displaynotes-->
+      </mat-card-content>
+
+      <mat-card-actions>
+        <!-- <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button> -->
+      </mat-card-actions>
+
+    </mat-card>
+   </div>
+  
+</div>

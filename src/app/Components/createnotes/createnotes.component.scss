@@ -1,0 +1,194 @@
+.section{
+    background-color: white;
+}
+.createnote{
+    // background-color: white;
+    border-radius: opx !important;
+    border: none;
+}
+.takeanote{
+    
+    border: none;
+    margin-top: 4%;
+    // height: 50px;
+   
+}
+.matform1{
+    border: 2px solid red;
+    width: 780px; 
+    // height: 45px;
+    margin-top: 20px;
+    margin-left: 90px;
+    border: none;
+    
+}
+.note1{
+    
+    background: transparent;
+    border: none;
+    font: normal 16px Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif; 
+    font-size: 20px;
+    -webkit-font-variant-ligatures: none;
+    font-variant-ligatures: none;
+    outline: none;
+    width: 100%;
+    overflow: hidden;
+    height: 16px!important;
+    justify-content: center;
+    margin-top:-2%;
+    position: relative;
+    margin-bottom:-2%;
+    margin-left: 2%;
+   
+}
+.checkbox{
+    margin-left: 1650%; 
+    margin-bottom:-2%;
+    position: relative; 
+    top: -45%;
+    left: -100%; 
+    width: 25px; 
+    height: 25px; 
+    opacity: 0.54;
+}
+.brush{
+    margin-left: 1500%; 
+    margin-top: -45%; 
+    position: relative; 
+    top: -20%; 
+    left: 80%; 
+    width: 25px; 
+    height: 25px; 
+    opacity: 0.54;
+}
+.insertphoto{
+    margin-left: 1550%; 
+    margin-top: 20%; 
+    position: relative; 
+    top: -50%; 
+    left: 58%; 
+    width: 25px; 
+    height: 25px;
+    opacity: 0.54;
+
+}
+.title{
+    // border:  2px solid yellow;
+    height: 200px;
+    display: flex;
+    position: relative;
+    top: 5%;
+    margin-top: 10%;
+    border: 1px solid #c6c9c9c9;
+    border-radius: 8px;
+    
+    // ::ng--deep.mat-form-field{
+    //     border-radius: 0px !important;
+    //     border: none;
+    // }
+    
+}
+// .matform2{
+//     border:  2px solid green;
+//     width: 780px; 
+//     height: 100px; 
+//     margin-top: 25px;
+//     margin-bottom: -15%;
+//     margin-left: 90px;
+// }
+.note3{
+    // border: 2px solid red;
+    // background: transparent;
+    border: none;
+    font: normal 16px Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    font-size: 20px;
+    -webkit-font-variant-ligatures: none;
+    font-variant-ligatures: none;
+    // outline: none;
+    width: 680px; 
+    overflow: hidden;
+    height: 66px!important;
+    justify-content: start;
+    margin-top:-10%; 
+    position: relative;
+    top: 20%;
+    margin-bottom:1%;
+    margin-left: 10%;
+}
+.pin{
+    // border: 2px solid black;
+    margin-left: 800%;
+    margin-top: -6%; 
+    // position: relative; 
+    // top: -80%; 
+    // left: 250%; 
+    width: 25px; 
+    height: 25px;
+    opacity: 0.54;
+    position: relative;
+    top: -10%;
+    cursor: pointer;
+
+
+}
+// .matform3{
+//     border:  2px solid red;
+//     width: 780px; 
+//     height: 30px;  
+//     margin-top: 20px; 
+//     margin-left: 90px; 
+//     border: none;
+// }
+.note2{
+    // border: 2px solid green;
+    font: normal 16px Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif; 
+    font-size: 18px;
+    -webkit-font-variant-ligatures: none;
+    font-variant-ligatures: none;
+    outline: none;
+    width: 100%;
+    overflow: hidden;
+    height: 46px!important;
+    justify-content: center;
+    margin-top:2%;
+    position: relative;
+    margin-bottom:2%;
+    margin-left: 10%;
+    top: -2%;
+}
+.closebutton1{
+    // border: 2px solid green;
+    margin-top: -0%;
+    margin-left: -20%;
+    height: 28%;
+    width: 80%;
+    margin-bottom: -5%;
+    position: relative;
+    
+    // justify-content: space-between;
+}
+// .close{
+//     border: 2px solid red;
+//     color: rgba(0,0,0,0.87);
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+//     white-space: nowrap;
+//     letter-spacing: .01785714em;
+//     font-family: 'Google Sans',Roboto,Arial,sans-serif;
+//     font-size: .875rem;
+//     font-weight: 500;
+//     line-height: 1.25rem;
+//     height: 36px;
+//     padding: 8px 24px;
+//     -webkit-border-radius: 4px;
+//     border-radius: 4px;
+//     border: none;
+//     cursor: pointer;
+//     display: inline-block;
+//     outline: none!important;
+//     // margin-right: 35px;
+//     margin-left: 110%;
+//     margin-top: -50%;
+//     margin-bottom: 10%;
+
+// }

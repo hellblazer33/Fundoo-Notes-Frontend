@@ -1,0 +1,62 @@
+<!-- <p>createnotes works!</p> -->
+<div class="section" fxLayout="column" fxLayoutAlign="space-evenly center">
+    <form [formGroup]="createnotesForm" (ngSubmit)="onSubmit()">
+        <div class="createnote">
+            <div class="takeanote" *ngIf="!writenote" (click)="takeanote()" fxLayout="column"
+                fxLayoutAlign="center center">
+
+                <mat-form-field class="matform1" appearance="outline">
+                    <!-- <mat-icon>search</mat-icon> -->
+                    <input class="note1" type="text" matInput placeholder="Take a note...">
+
+                    <button mat-icon-button class="closebutton" aria-label="Example icon-button with menu icon">
+                        <img class="checkbox" src="../../../assets/check_box_black_24dp.svg" alt="">
+
+                    </button>
+
+                    <button mat-icon-button class="closebutton" aria-label="Example icon-button with menu icon">
+                        <img class="brush" src="../../../assets/brush_black_24dp.svg" alt="">
+
+                    </button>
+
+                    <button mat-icon-button class="closebutton" aria-label="Example icon-button with menu icon">
+                        <img class="insertphoto" src="../../../assets/insert_photo_black_24dp.svg" alt="">
+
+                    </button>
+
+                </mat-form-field>
+
+            </div>
+
+            <div class="title" *ngIf="writenote" fxLayout="column" fxLayoutAlign="center center">
+
+                <!-- <mat-form-field class="matform2" appearance="outline"> -->
+
+                <input class="note3" matInput type="text" placeholder="Title" formControlName="title">
+
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                    <img class="pin" src="../../../assets/push_pin_black_24dp.svg" alt="">
+
+                </button>
+
+                <!-- </mat-form-field> -->
+
+                <!-- <mat-form-field class="matform3" appearance="outline"> -->
+
+                <input class="note2" matInput type="text" placeholder="Take a note..." formControlName="description">
+
+                <!-- </mat-form-field> -->
+
+                <div class="closebutton1" fxLayout="row" fxLayoutAlign="space-between center">
+                    <app-icons [notecard]="{isDeleted:false,isArchived:false}"></app-icons>
+                    <!--we are doinf this for restore and permanant delete-->
+                    <!-- <button class="close" (click)="onSubmit()" >Close</button> -->
+
+                    <button style="margin-left: 65%;" (click)="onSubmit()" mat-stroked-button>close</button>
+
+                </div>
+
+            </div>
+        </div>
+    </form>
+</div>

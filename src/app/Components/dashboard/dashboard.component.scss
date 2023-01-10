@@ -1,0 +1,195 @@
+.section{
+  background-color: white;
+}
+.form{
+  background-color: white;
+}
+.mat-toolbar{
+  background-color: white;
+  // border: 2px solid black;
+  border: 1px solid #c6c9c9;
+}
+.menubutton{
+  border: none;
+  background-color: white;
+  opacity: 0.54;
+}
+.keepimg{
+  cursor: pointer;
+  color: red;
+
+}
+.h1{
+  color: royalblue;
+  cursor: pointer;
+
+}
+.Search{
+  margin-left: 5em;
+  margin-top: 1em;
+  text-align: center;
+  padding-top: 21px;
+  padding-bottom: 20px;
+  font-size: 15px;
+  border-right-width: 50em;
+  // background: transparent;
+  background-color: transparent;
+}
+.refreshbutton{
+  // border: 1px solid red; 
+  opacity: 0.54; 
+  width: 30px; 
+  height: 30px; 
+  margin-left: 340px;
+
+}
+.viewbutton{
+  // border: 1px solid yellow; 
+  opacity: 0.54; 
+  width: 30px; 
+  height: 30px; 
+  margin-left: 360px;
+
+}
+.settingbutton{
+  // border: 1px solid green; 
+  opacity: 0.54; 
+  width: 30px; 
+  height: 30px; 
+  margin-left: 380px;
+
+}
+.appbutton{
+  // border: 1px solid blue; 
+  opacity: 0.54; 
+  width: 30px; 
+  height: 30px;
+  margin-left: 430px; 
+
+}
+.accountbutton{
+  // border: 1px solid pink;
+  width: 30px; 
+  height: 30px; 
+  opacity: 0.54; 
+  margin-left: 450px;
+  
+
+}
+
+.example-icon{
+  // border: 2px solid yellow;
+}
+.closebutton{
+  // border: 1px solid red;
+  position: relative;
+  left: 85%;
+  opacity: 0.54;
+  width: 30px; 
+  height: 30px;
+  margin-top: -15%;
+  // visibility: hidden;
+  // background-color: whitesmoke;
+}
+  
+  // .example-is-mobile .example-toolbar {
+  //   position: fixed;
+  //   /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  //   z-index: 2;
+  // }
+  
+  h1.example-app-name {
+    margin-left: 8px;
+  }
+  .example-sidenav-container {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    flex: 1;
+  
+  }
+  .example-is-mobile .example-sidenav-container {
+    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+       `<body>` to be our scrolling element for mobile layouts. */
+    flex: 1 0 auto;
+  }
+  .mat-sidenav-container
+  {
+    border: none;
+    height: 88vh;
+    background: #fff;   
+  }
+  #sidenav.menu-close{
+    height: 100vh;
+    width: 60px;
+    margin-left: 1em;
+    
+  }
+
+ 
+  
+
+  #sidenav.menu-open{
+    margin-left: 1em;
+    width: 240px;
+  }
+  .container {
+    border: none;
+    border-top: 70px;
+    margin-top: 2px;
+    margin-left: 20px;
+    text-align: center;  
+  }
+  .sidenav-button:focus {
+    background-color: rgba(255, 196, 0, 0.2);
+    // border:1px solid red;
+    // margin-top: 1px;
+    border-top-right-radius: 30vh;
+    border-bottom-right-radius: 30vh;
+    width: 240px;
+    padding-top: 6px;
+   
+    // padding-right: 10%;
+    // justify-content: start;
+  }
+
+  
+ 
+  .sidenav-button {
+    border-top-right-radius: 30vh;
+    border-bottom-right-radius: 30vh;
+    width: 240px;
+    height: 50px;
+    text-align: center;
+    border: transparent;
+    padding-top: 6px;
+    
+  }
+  mat-nav-list {
+    // border: 2px solid black;
+    margin-left: -22px;
+  }
+  .sidenav-button {
+    display: inline-flex;
+    // justify-content: space-between;
+    border: transparent;
+    background-color: white;
+    // opacity:0.54;
+  
+  }
+  .sidenav-img {
+    margin-right: 50px;
+    
+  }
+  mat-sidenav-content {
+    position: relative;
+    display: block;
+    height: 100%;
+    overflow: auto;
+    border: 2px solid transparent;
+    
+  }
+
+
+
+
+  

@@ -1,0 +1,97 @@
+.section{
+    // border: 1px solid gainsboro ;
+    font-family: 'Roboto',arial,sans-serif;
+    width: 10%;
+    height: 7%;
+    position: relative;
+    left: 55%;
+    top: 5%;
+    // border: 2px solid greenyellow;
+    // border: none;
+    // border-radius: 6px;
+}
+.icons{
+    // border: 2px solid black;
+    cursor: pointer;
+    justify-content: center;
+    margin-left: 100%;
+    // display: block;
+
+}
+.iconsandbuttons{
+    // border: 2px solid yellow;
+    margin-left: 80%;
+    display: flex;
+    position: relative;
+    // right: 52%;
+    // border: none;
+    opacity: 0.6;
+    // background-color: white;
+    // display: none;
+}
+.iconbutton1{
+    cursor: pointer;
+    justify-content: space-around;
+    border: none;
+    background: none;
+    // border-radius: 50px;
+    // background-color: white;
+  
+}
+.iconbutton2{
+    cursor: pointer;
+    border: none;
+    background: none;
+    // background-color: white;
+}
+.iconbutton3{
+    cursor: pointer;
+    border: none;
+    background: none;
+    // background-color: white;
+}
+.iconbutton4{
+    cursor: pointer;
+    border: none;
+    background: none;
+    // background-color: white;
+
+}
+.iconbutton5{
+    cursor: pointer;
+    border: none;
+    background: none;
+    // background-color: white;
+
+}
+.iconbutton6{
+    cursor: pointer;
+    border: none;
+    background: none;
+    // background-color: white;
+
+}
+.trashIcons{
+    // border: 5px solid transparent;
+    // border: 2px solid red;
+    height: auto;
+    width: auto;
+    // top: 20px;
+    display: flex;
+      align-items: center;
+    background-color: transparent;
+    margin-left: -105px;
+   
+    justify-content: space-between;
+    opacity: 0.54;
+    // padding-left: -5%;
+  }
+// .mat-menu{
+//     border: 1px solid brown;
+//     width: 50px;
+// }
+
+p{
+//    border: 1px solid yellow; 
+   margin-left: 12px;
+}

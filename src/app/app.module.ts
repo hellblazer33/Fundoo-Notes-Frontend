@@ -18,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';      //its a 
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { HttpClientModule } from '@angular/common/http';    // used to connect with backend URL
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
 
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -37,6 +38,14 @@ import {MatMenuModule} from '@angular/material/menu';
 
 import {MatDatepickerModule} from '@angular/material/datepicker';  // used for reminder pick date and time 
 import {MatNativeDateModule} from '@angular/material/core'         // used for reminder pick date and time 
+import { IconsComponent } from './Components/icons/icons.component';
+import { CreatenotesComponent } from './Components/createnotes/createnotes.component';
+import { GetallnotesComponent } from './Components/getallnotes/getallnotes.component';
+import { DisplaynotesComponent } from './Components/displaynotes/displaynotes.component';
+import { TrashnotesComponent } from './Components/trashnotes/trashnotes.component';
+import { RemindernotesComponent } from './Components/remindernotes/remindernotes.component';
+import { ArchivenotesComponent } from './Components/archivenotes/archivenotes.component';
+import { UpdateComponent } from './Components/update/update.component';
 // import { MatMomentDateModule } from "@angular/material-moment-adapter";
 
 
@@ -47,7 +56,17 @@ import {MatNativeDateModule} from '@angular/material/core'         // used for r
     RegistrationComponent,
     SigninComponent,
     ForgotemailComponent,
-    ForgotpasswordComponent
+    ForgotpasswordComponent,
+    DashboardComponent,
+    IconsComponent,
+    CreatenotesComponent,
+    GetallnotesComponent,
+    DisplaynotesComponent,
+    TrashnotesComponent,
+    RemindernotesComponent,
+    ArchivenotesComponent,
+    UpdateComponent
+    
   
   ],
   imports: [
