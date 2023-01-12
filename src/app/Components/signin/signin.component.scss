@@ -1,5 +1,5 @@
 .section{
-    // border: 2px solid rebeccapurple;
+    
     width: 99vw;
     height: 100vh;
     background-color: white;
@@ -14,20 +14,13 @@
     left: 36%;
     top: 5%;
     border-radius: 10px;
-    // opacity: 0.5;
+    
     
 }
 
-// .leftdiv{
-//     border: 2px solid red;
-//     display: flex;
-//     flex-direction: row;
-//     height: 50%;
-//     width: 50%;
 
-// }
 .heading{
-    // border: 2px solid red;
+   
     line-height: 1;  
     height: 10%;
     width: 20%;
@@ -65,7 +58,7 @@
 }
 
 .title{
-    // border: 2px solid green;
+  
     display: flex;
     flex-direction: row;
     position: relative;
@@ -81,7 +74,7 @@
 }
 
 .title1{
-    // border: 2px solid yellow;
+    
     color: #202124;
     font-size: 16px;
     font-weight: 400;
@@ -97,12 +90,12 @@
 
 .emailorphone{
 
-    //   border: 2px solid pink;
+   
       position: relative;
       top: -18%;
       left: 8%;
       width: 100%;
-      // height: 50%;
+      
       display: flex;
       justify-content: space-between;
       font-size: 14px;
@@ -117,7 +110,7 @@
 }
 
 .forgotemailbutton{
-    // border: 1px solid yellow;
+    
     position: relative;
     left: 8%;
     width: 70%;
@@ -131,12 +124,11 @@
 }
 
 .button{
-    // border: 2px solid blue;
+    
     position: relative;
     right: 2%;
     top: 2%;
-    // left: 5%;
-    // color: blue;
+    
     font-family: "Google Sans",Roboto,Arial,sans-serif;
     color: var(--gm-colortextbutton-ink-color,#1a73e8);
     background-color: transparent;
@@ -151,12 +143,12 @@
 
 .password{
     
-    //   border: 2px solid pink;
+    
     position: relative;
     top: -22%;
     left: 8%;
     width: 100%;
-    // height: 50%;
+    
     display: flex;
     justify-content: space-between;
     font-size: 14px;
@@ -168,7 +160,7 @@
 }
 
 .paragraph{
-    // border: 2px solid red;
+    
     color: #5f6368;
     font-size: 14px;
     line-height: 1.4286;
@@ -180,7 +172,7 @@
 }
 
 .learnmorebutton{
-    // border: 1px solid yellow;
+   
     position: relative;
     top: -7%;
     left: 8%;   
@@ -193,11 +185,11 @@
 
 }
 .button2{
-    // border: 1px solid green;
+    
     position: relative;
     right: 4%;
     top: -14%;
-    // left: 5%;
+    
     font-family: "Google Sans",Roboto,Arial,sans-serif;
     color: var(--gm-colortextbutton-ink-color,#1a73e8);
     background-color: transparent;
@@ -208,18 +200,18 @@
     cursor: pointer;
     border: none;
     margin-top: 1%;
-    // margin-bottom: 5%;
+   
 
 
 
 }
 
 .createaccountandnextbutton{
-    // border: 2px solid black;
+    
     position: relative;
     left: 8%;
     width: 100%;
-    // height: 5%;
+   
     top: -6%;
     font-size: 14px;
     height: 20px;
@@ -229,8 +221,7 @@
 }
 
 .button3{
-    // border: 2px solid red;
-    // color: blue;
+    
     color: var(--gm-colortextbutton-ink-color,#1a73e8);
     font-family: "Google Sans",Roboto,Arial,sans-serif;
     background-color: transparent;
@@ -247,10 +238,10 @@
 }
 
 .button4{
-    // border: 2px solid red;
+    
     position: relative;
     left: 48%;
-    // background-color: blue;
+    
     background-color: var(--gm-colortextbutton-ink-color,#1a73e8);
     color: white;
     border-radius: 6px;
@@ -265,11 +256,4 @@
 
 }
 
-// @media screen and (max-width:600px){
-//     .section{
-//         // border: 2px solid rebeccapurple;
-//         width: 99vw;
-//         height: 100vh;
-//         background-color: white;
-//     }
-// }
+

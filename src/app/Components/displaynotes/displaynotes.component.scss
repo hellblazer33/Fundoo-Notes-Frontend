@@ -1,41 +1,26 @@
-// .section{
-//     background-color: white;
-//     // width: 100%;
-//     // height: auto;
-//     margin-left: 10%;
-//     padding-top: 10%;
-//     padding-left: 7%;
 
-// }
 
 .example-card {
     width: 250px;
-    // border: 2px solid red;
     border: 1px solid gainsboro ;
     height: auto;
-    // margin-top: -20%;
-    // margin-left: 5%;
+    
     border-radius: 15px;
   }
-  // .example-card:hover{
-  //   border: 1px solid gainsboro ;
-  // }
+  
 
 .pinbutton{
-    // border: 2px solid blue;
-    // width: 25px;
-    // height: 25px;
+    
     border: none; 
     background: none; 
-    // background-color: white;
+    
     cursor: pointer;
-    // margin-top: 5px;
+    
      
   }
 
   .pin{
-    // border: 2px solid green;
-    // margin-right: 35%;
+    
     margin-left: 140px;
     margin-top: 5%;
     margin-bottom: -7px;
@@ -50,19 +35,18 @@
   }
 
   .matcardicons{
-      // border: 2px solid red;
+      
       height: 32%;
       width: 100%;
       margin-top: 23%;
       margin-left: -18%;
-      // margin-right: 55%;
+      
       overflow: visible;
       visibility: hidden;
-      // padding-bottom: -10%;
-      // justify-content: space-between;
+      
   }
 
-  .example-card:hover .matcardicons{  //this will give visibility hidden and visible effect on hover only
+  .example-card:hover .matcardicons{  
     visibility: visible;
     
   }

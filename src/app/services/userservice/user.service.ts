@@ -59,15 +59,14 @@ export class UserService {
 
 
   // }
-  forgotpassword(payload: any, token: any) {
-    console.log("user password ======token", token);
+  Reset(payload: any, token: any){
 
     let header = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'Authorization': token
+      header:new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization':'Bearer '+token
       })
     }
-    return this.httpService.postService("user/resetpassword", this.encode(payload), true, header)
+    return this.httpService.putService('user/resetpassword',this.encode(payload),true,header);
   }
 }

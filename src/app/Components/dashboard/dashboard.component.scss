@@ -141,15 +141,13 @@
   }
   .sidenav-button:focus {
     background-color: rgba(255, 196, 0, 0.2);
-    // border:1px solid red;
-    // margin-top: 1px;
+    
     border-top-right-radius: 30vh;
     border-bottom-right-radius: 30vh;
     width: 240px;
     padding-top: 6px;
    
-    // padding-right: 10%;
-    // justify-content: start;
+   
   }
 
   
@@ -165,15 +163,15 @@
     
   }
   mat-nav-list {
-    // border: 2px solid black;
+   
     margin-left: -22px;
   }
   .sidenav-button {
     display: inline-flex;
-    // justify-content: space-between;
+    
     border: transparent;
     background-color: white;
-    // opacity:0.54;
+   
   
   }
   .sidenav-img {

@@ -19,13 +19,12 @@ export class ForgotemailComponent implements OnInit {
       phoneOrEmail:['',[Validators.required]]
     })
   }
-  // convenience getter for easy access to form fields
-  // get f() { return this.  forgotemailForm.controls;}
+  
 
   onSubmit() {
     this.submitted = true;
 
-        // stop here if form is invalid
+       
         if (this.forgotemailForm.valid) {
           console.log(this.forgotemailForm.value);
           let forgotemailobject={
@@ -38,14 +37,10 @@ export class ForgotemailComponent implements OnInit {
         console.log("enter data");
       }
 
-      // display form values on success
-        // alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.  forgotemailForm.value, null, 4));
+     
     }
 
-    // onReset() {
-    //     this.submitted = false;
-    //     this.  forgotemailForm.reset();
-    // }
+   
 
 
   }

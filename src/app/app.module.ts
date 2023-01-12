@@ -27,6 +27,9 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 
 import {MatListModule} from '@angular/material/list';
+import { CreatenotesComponent } from './Components/createnotes/createnotes.component';
+
+import { GetallnotesComponent } from './Components/getallnotes/getallnotes.component';
 
 
 import {MatCardModule} from '@angular/material/card';
@@ -36,16 +39,10 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatMenuModule} from '@angular/material/menu';
 
 
+
 import {MatDatepickerModule} from '@angular/material/datepicker';  // used for reminder pick date and time 
 import {MatNativeDateModule} from '@angular/material/core'         // used for reminder pick date and time 
-import { IconsComponent } from './Components/icons/icons.component';
-import { CreatenotesComponent } from './Components/createnotes/createnotes.component';
-import { GetallnotesComponent } from './Components/getallnotes/getallnotes.component';
 import { DisplaynotesComponent } from './Components/displaynotes/displaynotes.component';
-import { TrashnotesComponent } from './Components/trashnotes/trashnotes.component';
-import { RemindernotesComponent } from './Components/remindernotes/remindernotes.component';
-import { ArchivenotesComponent } from './Components/archivenotes/archivenotes.component';
-import { UpdateComponent } from './Components/update/update.component';
 // import { MatMomentDateModule } from "@angular/material-moment-adapter";
 
 
@@ -57,16 +54,12 @@ import { UpdateComponent } from './Components/update/update.component';
     SigninComponent,
     ForgotemailComponent,
     ForgotpasswordComponent,
-    DashboardComponent,
-    IconsComponent,
     CreatenotesComponent,
     GetallnotesComponent,
-    DisplaynotesComponent,
-    TrashnotesComponent,
-    RemindernotesComponent,
-    ArchivenotesComponent,
-    UpdateComponent
+    DashboardComponent,
+    DisplaynotesComponent
     
+   
   
   ],
   imports: [

@@ -12,6 +12,7 @@ export class SigninComponent implements OnInit {
 
   signinForm!: FormGroup;
   submitted = false;
+  token:any
 
   constructor(private formBuilder: FormBuilder, private user: UserService, private route: Router) { }
 
@@ -22,8 +23,7 @@ export class SigninComponent implements OnInit {
       password: ['', Validators.required],
     })
   }
-  // convenience getter for easy access to form fields
-  // get f() { return this. signinForm.controls;}
+  
 
   onSubmit() {
     this.submitted = true;
@@ -36,7 +36,8 @@ export class SigninComponent implements OnInit {
       }
       this.user.userSignin(signinobject).subscribe((response: any) => {
         console.log("*****Login Successfull*****",response);
-        localStorage.setItem('token',response.data)
+        localStorage.setItem('token', response.data);
+        this.route.navigateByUrl('/dashboard/getallnotes');
 
       
       })

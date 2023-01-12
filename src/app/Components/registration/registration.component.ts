@@ -30,8 +30,8 @@ export class RegistrationComponent implements OnInit {
     if (this.registerForm.valid) {
       console.log(this.registerForm.value);
 
-      let payload = {    //this payload is a json object
-        firstName: this.registerForm.value.firstName, // leftside firstname is exactly same as that of backend API and rightside firstname i.e., ,firstName should be exact same as that of formcontrolname in .html file or same as written above in ngonit 
+      let payload = {    
+        firstName: this.registerForm.value.firstName, 
         lastName: this.registerForm.value.lastName,
         email: this.registerForm.value.userName,
         password: this.registerForm.value.password,
@@ -39,7 +39,7 @@ export class RegistrationComponent implements OnInit {
         // confirm:this.registerForm.value.confirm,
 
       }
-      this.user.userRegister(payload).subscribe((response: any) => {    //subscribe is a method from observable
+      this.user.userRegister(payload).subscribe((response: any) => {    
         console.log("********Registration Successfull*******",response)
       })
     } else {

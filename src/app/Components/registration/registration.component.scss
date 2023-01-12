@@ -1,5 +1,5 @@
 .section{
-    // border: 2px solid rebeccapurple;
+    
     width: 99vw;
     height: 100vh;
     background-color: white;
@@ -7,19 +7,19 @@
 .form{
     border: 1px solid grey;
     display: flex;
-    // justify-content: center;
+    
     width: 60%;
     height: 92%;
     position: relative;
     left: 21%;
     top: 5%;
     border-radius: 10px;
-    // opacity: 0.5;
+    
     
 }
 
 .heading{
-    // border: 2px solid red;
+    
     line-height: 1;  
     height: 10%;
     width: 20%;
@@ -56,7 +56,7 @@
 
 }
 .title{
-    // border: 2px solid green;
+    
     display: flex;
     flex-direction: row;
     position: relative;
@@ -71,12 +71,12 @@
     
 }
 .firstandlastname{
-    // border: 2px solid pink;
+    
     position: relative;
     top: -12%;
     left: 8%;
     width: 97%;
-    // height: 50%;
+    
     display: flex;
     justify-content: space-between;
     font-size: 14px;
@@ -87,7 +87,7 @@
 
 }
 .username{
-    // border: 2px solid red;
+    
     position: relative;
     left: 8%;
     width: 100%;
@@ -101,7 +101,7 @@
 }
 
 .emailbutton{
-    // border: 2px solid yellow;
+    
     position: relative;
     left: 8%;
     width: 70%;
@@ -111,14 +111,13 @@
     padding: 6px 8px;
     margin: 2px;
     
-    // border-color: 1px solid white;
+   
     
 }
 .button{
-    // border: 2px solid blue;
+    
     position: relative;
-    // left: 5%;
-    // color: blue;
+    
     font-family: "Google Sans",Roboto,Arial,sans-serif;
     color: var(--gm-colortextbutton-ink-color,#1a73e8);
     background-color: transparent;
@@ -128,11 +127,11 @@
     text-transform: none;
     cursor: pointer;
     border: none;
-    // border-color: 1px solid white;
+    
 
 }
 .passwordandconfirm{
-    // border: 2px solid green;
+    
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -145,7 +144,7 @@
     margin: 2px;
 }
 .checkbox{
-    // border: 2px solid red;
+    
     position: relative;
     left: 9%;
     width: 70%;
@@ -159,17 +158,17 @@
 
 }
 .example-margin{
-    // border: 2px solid green;
+    
     position: relative;
     width: 80%;
-    // left: 5%;
+    
 }
 .signinandnextbutton{
-    // border: 2px solid black;
+   
     position: relative;
     left: 8%;
     width: 100%;
-    // height: 05%;
+    
     top: 6%;
     font-size: 14px;
     height: 20px;
@@ -178,8 +177,7 @@
     margin-top: 10%;
 }
 .button1{
-    // border: 2px solid red;
-    // color: blue;
+    
     color: var(--gm-colortextbutton-ink-color,#1a73e8);
     font-family: "Google Sans",Roboto,Arial,sans-serif;
     background-color: transparent;
@@ -191,10 +189,10 @@
     border: none;
 }
 .button2{
-    // border: 2px solid red;
+    
     position: relative;
     left: 50%;
-    // background-color: blue;
+    
     background-color: var(--gm-colortextbutton-ink-color,#1a73e8);
     color: white;
     border-radius: 6px;
@@ -209,22 +207,22 @@
 
 }
 .imageandpara{
-    // border: 2px solid red;
+    
     position: relative;
     left:42%;
     width: 250px;
     height: 40%;
     top: 22%;
-    // bottom: 48%;
+    
 }
 
 .image{
-    // border: 2px solid green;
+  
     width: 250px;
     height: 250px;
 }
 .para{
-    // border: 2px solid yellow;
+    
     position: relative;
     left: 8%;
     bottom: 5%;

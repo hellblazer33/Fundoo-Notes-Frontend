@@ -1,4 +1,4 @@
-<!-- <p>createnotes works!</p> -->
+
 <div class="section" fxLayout="column" fxLayoutAlign="space-evenly center">
     <form [formGroup]="createnotesForm" (ngSubmit)="onSubmit()">
         <div class="createnote">
@@ -6,7 +6,7 @@
                 fxLayoutAlign="center center">
 
                 <mat-form-field class="matform1" appearance="outline">
-                    <!-- <mat-icon>search</mat-icon> -->
+                   
                     <input class="note1" type="text" matInput placeholder="Take a note...">
 
                     <button mat-icon-button class="closebutton" aria-label="Example icon-button with menu icon">
@@ -30,7 +30,7 @@
 
             <div class="title" *ngIf="writenote" fxLayout="column" fxLayoutAlign="center center">
 
-                <!-- <mat-form-field class="matform2" appearance="outline"> -->
+               
 
                 <input class="note3" matInput type="text" placeholder="Title" formControlName="title">
 
@@ -39,18 +39,15 @@
 
                 </button>
 
-                <!-- </mat-form-field> -->
-
-                <!-- <mat-form-field class="matform3" appearance="outline"> -->
+                
 
                 <input class="note2" matInput type="text" placeholder="Take a note..." formControlName="description">
 
-                <!-- </mat-form-field> -->
+                
 
                 <div class="closebutton1" fxLayout="row" fxLayoutAlign="space-between center">
-                    <app-icons [notecard]="{isDeleted:false,isArchived:false}"></app-icons>
-                    <!--we are doinf this for restore and permanant delete-->
-                    <!-- <button class="close" (click)="onSubmit()" >Close</button> -->
+                    
+                
 
                     <button style="margin-left: 65%;" (click)="onSubmit()" mat-stroked-button>close</button>
 

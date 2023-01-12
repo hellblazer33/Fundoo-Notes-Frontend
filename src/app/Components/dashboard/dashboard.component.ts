@@ -22,8 +22,7 @@ export class DashboardComponent implements OnInit {
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
   ngOnInit(): void {
-    // throw new Error('Method not implemented.');
-
+    
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
@@ -39,18 +38,7 @@ export class DashboardComponent implements OnInit {
   }
   
 
-  notes() {
-    this.route.navigateByUrl('dashboard/getallnotes')
-  }
-  Archive() {
-    this.route.navigateByUrl('dashboard/archiveNotes')
-  }
-  Trash() {
-    this.route.navigateByUrl('dashboard/trash')
-  }
-  Reminder() {
-    this.route.navigateByUrl('dashboard/reminderNotes')
-  }
+
 
 
   Logout() {

@@ -10,8 +10,7 @@ import { NotesService } from 'src/app/services/notesservice/notes.service';
 })
 export class CreatenotesComponent implements OnInit {
 
-  @Output() autorefreshEvent = new EventEmitter<string>();  //this is child-parent datasharing & is coming from getallnotes.html, we've to import EventEmitter in the imports above 
-
+  
   createnotesForm!: FormGroup;
   // submitted = false;
 
@@ -30,8 +29,7 @@ export class CreatenotesComponent implements OnInit {
 
   takeanote() {
     console.log(this.writenote);
-    return this.writenote === true ? (this.writenote = false) : (this.writenote = true);   // turnary operator is used here
-    // this.writenote=true;
+    return this.writenote === true ? (this.writenote = false) : (this.writenote = true);   
 
   }
   onSubmit() {
@@ -45,9 +43,9 @@ export class CreatenotesComponent implements OnInit {
         description: this.createnotesForm.value.description
       }
       this.note.usercreatenotes(createnote).subscribe((response: any) => {
-        console.log(response);
+        console.log("*****Note Created Successfull*****",response);
 
-        this.autorefreshEvent.emit(response)  // you can pass anything inside .emit() parenthesis child-parent data sharing between getallnotes and create notes & is coming from getallnotes.html
+        
       })
 
     } else {
