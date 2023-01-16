@@ -1,0 +1,118 @@
+<div class="section" fxLayout="row" fxLayoutAlign="start center">
+
+    <div class="icons" *ngIf="showIcons" fxLayout="row" fxLayout.xs="row"
+        fxFlex="50" fxFlex.xs="95">
+
+        <div class="iconsandbuttons" fxLayoutAlign="space-between center">
+            <button [matMenuTriggerFor]="reminderMenu" class="iconbutton1" fxLayout="row"
+                fxLayoutAlign="space-around center">
+                <img src="../../../assets/add_alert_black_24dp.svg" alt="">
+
+                <mat-menu #reminderMenu="matMenu" style="width: 50px;">
+                    <p>Reminder: </p>
+                    
+                    <button mat-menu-item>Later today
+                    </button>
+                    <button mat-menu-item>Tomorrow
+                    </button>
+                    <button mat-menu-item>Next week
+                    </button>
+                    <button mat-menu-item>Home
+                    </button>
+                    <button [matMenuTriggerFor]="dateMenu" mat-menu-item>
+                        <img style="position: relative; top: 2px;width: 16px; height: 16px; justify-content: space-evenly;"
+                            src="../../../assets/schedule_black_24dp.svg" alt="">Pick date & time
+
+                    </button>
+                    <mat-menu #dateMenu="matMenu">
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Choose a date</mat-label>
+                            <input matInput [matDatepicker]="picker">
+                            <mat-datepicker-toggle matSuffix [for]="picker">
+                                <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                            </mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+
+                        <button>save</button>
+                    </mat-menu>
+
+                    <button mat-menu-item>
+                        <img style=" position: relative; top: 3px;width: 16px; height: 16px; justify-content: space-evenly;"
+                            src="../../../assets/place_black_24dp.svg" alt="">Pick place
+                    </button>
+
+                </mat-menu>
+            </button>
+        </div>
+
+        <div class="iconsandbuttons">
+            <button class="iconbutton2" fxLayout="row" fxLayoutAlign="space-around center">
+                <img src="../../../assets/person_add_alt_black_24dp.svg" alt=""></button>
+
+        </div>
+
+        <div class="iconsandbuttons">
+            <button [matMenuTriggerFor]="colorMenu" class="iconbutton3" fxLayout="row"
+                fxLayoutAlign="space-around center">
+                <img src="../../../assets/palette_black_24dp.svg" alt="">
+            </button>
+            <mat-menu #colorMenu="matMenu">
+                <button mat-menu-item>
+                    <button 
+                       >
+                    </button>
+                   
+                </button>
+            </mat-menu>
+
+        </div>
+
+        <div class="iconsandbuttons">
+            <button class="iconbutton4" fxLayout="row" fxLayoutAlign="space-around center">
+                <img src="../../../assets/insert_photo_black_24dp (1).svg" alt=""></button>
+
+        </div>
+
+        <div class="iconsandbuttons">
+            <div *ngIf="showIcons">
+                <button class="iconbutton5" fxLayout="row" fxLayoutAlign="space-around center">
+                    <img src="../../../assets/archive_black_24dp (1).svg" (click)="Archivenote()" alt="">
+                </button>
+            </div>
+            <div *ngIf="!showIcons">
+                <button mat-icon-button (click)="Unarchive()">
+                    <mat-icon>unarchive</mat-icon>
+                </button>
+            </div>
+
+
+        </div>
+
+
+        <div class="iconsandbuttons">
+            <button [matMenuTriggerFor]="menu" class="iconbutton6" fxLayout="row" fxLayoutAlign="space-around center">
+                <img src="../../../assets/more_vert_black_24dp.svg" alt="">
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <span (click)="deletenote()">Delete note</span>
+                    
+                </button>
+            </mat-menu>
+
+        </div>
+
+    </div>
+
+    <div class="trashIcons" *ngIf="!showIcons">
+        <button mat-icon-button>
+            
+            <img src="../../../assets/delete_black_24dp.svg" alt="">
+        </button>
+        <button mat-icon-button>
+            <img src="../../../assets/restore_from_trash_black_24dp.svg" alt="">
+        </button>
+    </div>
+
+</div>

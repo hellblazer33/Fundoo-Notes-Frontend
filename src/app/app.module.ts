@@ -8,16 +8,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegistrationComponent } from './Components/registration/registration.component';
 import { SigninComponent } from './Components/signin/signin.component';
 
-import {MatFormFieldModule} from '@angular/material/form-field';  //its is a parent module for input module, mat label, mat buttons, mat checkbox etc etc.... 
+import {MatFormFieldModule} from '@angular/material/form-field';  
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatInputModule } from '@angular/material/input';
 
 import { ForgotemailComponent } from './Components/forgotemail/forgotemail.component';
 import { ForgotpasswordComponent } from './Components/forgotpassword/forgotpassword.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';      //its a parent module for form control, form builder
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';      
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { HttpClientModule } from '@angular/common/http';    // used to connect with backend URL
+import { HttpClientModule } from '@angular/common/http';    
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -40,9 +40,11 @@ import {MatMenuModule} from '@angular/material/menu';
 
 
 
-import {MatDatepickerModule} from '@angular/material/datepicker';  // used for reminder pick date and time 
-import {MatNativeDateModule} from '@angular/material/core'         // used for reminder pick date and time 
+import {MatDatepickerModule} from '@angular/material/datepicker';  
+import {MatNativeDateModule} from '@angular/material/core'         
 import { DisplaynotesComponent } from './Components/displaynotes/displaynotes.component';
+import { IconsComponent } from './Components/icons/icons.component';
+import { UpdateComponent } from './Components/update/update.component';
 // import { MatMomentDateModule } from "@angular/material-moment-adapter";
 
 
@@ -57,7 +59,11 @@ import { DisplaynotesComponent } from './Components/displaynotes/displaynotes.co
     CreatenotesComponent,
     GetallnotesComponent,
     DashboardComponent,
-    DisplaynotesComponent
+    DisplaynotesComponent,
+    IconsComponent,
+    UpdateComponent
+    
+    
     
    
   

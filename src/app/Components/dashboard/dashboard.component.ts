@@ -11,22 +11,18 @@ export class DashboardComponent implements OnInit {
   isMenuOpen = true;
   contentMargin = 200;
 
-  mobileQuery: MediaQueryList;
+ 
 
-  private _mobileQueryListener: () => void;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private route: Router) {
+  constructor(private route: Router) {
 
-    this.mobileQuery = media.matchMedia('(max-width: 600px)');
-    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
-    this.mobileQuery.addListener(this._mobileQueryListener);
   }
   ngOnInit(): void {
     
-    this.mobileQuery.removeListener(this._mobileQueryListener);
+
+    
   }
 
- 
   onToolbarMenuToggle() {
     this.isMenuOpen = !this.isMenuOpen;
     if (!this.isMenuOpen) {
@@ -36,10 +32,12 @@ export class DashboardComponent implements OnInit {
       this.contentMargin = 400;
     }
   }
+
+  notes() {
+    this.route.navigateByUrl('dashboard/getallnotes')
+  }
+
   
-
-
-
 
   Logout() {
     localStorage.removeItem('token');

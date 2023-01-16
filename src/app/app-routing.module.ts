@@ -27,7 +27,7 @@ const routes: Routes = [
      
     children:[
      { path:'', redirectTo:"/dashboard/getallnotes", pathMatch:'full' },
-     { path:'getallnotes',component:GetallnotesComponent},   // inside getallnotes we have given the selector of createnotes and display notes thats why below here we commented out the path of create notes & displaynotes 
+     { path:'getallnotes',component:GetallnotesComponent},   
       
     ]}, 
   

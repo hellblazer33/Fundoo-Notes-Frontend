@@ -1,25 +1,28 @@
 <div fxLayout="row wrap" fxLayoutGap="20px grid" style="padding-top: 5%; padding-left: 10%;">
 
-  <div *ngFor="let note1 of notesArraylist;">
+  <div *ngFor="let note of notesArraylist;">
 
     <mat-card class="example-card">
 
-      <mat-card-title>
+      <mat-card-title (click)="openDialog(note)">
 
-        {{note1.title }}
+        {{note.title }}
 
       </mat-card-title>
 
-      <mat-card-subtitle>
+      <mat-card-subtitle (click)="openDialog(note)">
 
-        {{ note1.description }}
+        {{ note.description }}
+
+        
       </mat-card-subtitle>
-
-      <mat-card-actions>
-
-      </mat-card-actions>
-
+      
+      <mat-card-content class="matcardicons">
+        <app-icons [notecard]="note"></app-icons>    <!--this is used for data sharing between icons and displaynotes & is child of displaynotes-->
+    </mat-card-content>
+      
     </mat-card>
+    
   </div>
 
 </div>

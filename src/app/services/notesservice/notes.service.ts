@@ -36,9 +36,41 @@ export class NotesService {
    }
 
 
+   userdeletenotes(data:any){
 
+    let header= {
+      headers: new HttpHeaders({
+        'Content-Type':'application/json',
+        'Authorization':'Bearer '+this.token
+      })
+     
+    }
+  
+    return this.httpService.putService(`notes/istrash?notesId=${data.notesId}`,data,true,header)
 
+   }
 
+   userarchivenotes(data:any){
+
+    let header= {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization':'Bearer '+this.token
+      })
+    }
+    return this.httpService.putService(`notes/isarchive?notesId=${data.notesId}`,data,true,header)
+   }
+
+   userupdatenotes(data:any){
+
+    let header= {
+      headers: new HttpHeaders({
+        'Content-Type':'application/json',
+        'Authorization':'Bearer '+this.token
+      })
+    }
+    return this.httpService.postService(`notes/update?notesId=${data.notesId}`,data,true,header)
+   }
 
 
 }

@@ -14,9 +14,9 @@ export class HttpService {
   }
 
   
-   putService(url:any, data:any, token:boolean=false, httpOptions:any){   // here data:any is used in context of whatever data we are sending to backend through post operation
-    console.log(data)
-    return this.http.put(this.baseurl+url, data, token && httpOptions)
+   putService(url:any,data:any,token:boolean=false, httpOptions:any){   // here data:any is used in context of whatever data we are sending to backend through post operation
+    
+    return this.http.put(this.baseurl+url,data,token && httpOptions)
    }
   
    getService(url:any,token:boolean=false,httpOptions:any){

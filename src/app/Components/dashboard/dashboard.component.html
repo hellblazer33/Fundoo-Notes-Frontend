@@ -1,27 +1,31 @@
-<div class="section" [class.section]="mobileQuery.matches">
+<div class="section">
   <div class="form">
     <mat-toolbar>
 
       <div class="menubutton">
-        <button mat-icon-button class="example-icon"
+        <button mat-icon-button (mouseover)='onToolbarMenuToggle()' (mouseout)='onToolbarMenuToggle()' class="example-icon"
           aria-label="Example icon-button with menu icon">
           <mat-icon>menu</mat-icon>
         </button>
-        
+        <!-- <button>
+          <mat-icon (click)="sidenav.toggle();" style="color: grey; cursor: pointer;">menu</mat-icon>
+        </button> -->
       </div>
 
-    
+      <!-- <div class="keepimageandbutton"> -->
       <img class="keepimg" src="../../../assets/keep_2020q4_48dp.png" alt="">
       <h1 style="display: inline-block;font-family: 'Product Sans',Arial,sans-serif;font-size: 22px;color: #5f6368;opacity: 1;
       vertical-align: middle; cursor: pointer;line-height: 24px;padding-left: 4px;">Fundoo</h1>
       <span class="example-spacer"></span>
 
-     
+      <!-- </div> -->
 
       <div class="Search">
         <mat-form-field appearance="outline" [style.width.px]="600">
           <mat-label>Search</mat-label>
-       
+          <!-- <img
+            style="opacity: 0.54; width: 30px; height: 30px; background-color: white; margin-top: 20%; position: relative; top: -10%;"
+            src="../../../assets/search_black_24dp.svg" alt=""> -->
           <input matInput placeholder="Search">
         </mat-form-field>
       </div>
@@ -42,46 +46,46 @@
         <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
           <img class="appbutton" src="../../../assets/apps_black_24dp.svg" alt="">
         </button>
-      </div>
-        <img type="image" class="accountbutton" src="../../../assets/account_circle_black_24dp.svg" height="28px" width="28px" [matMenuTriggerFor]="menu">
-                <mat-menu #menu="matMenu">
-                    <button  mat-menu-item (click)="Logout()">Logout</button>
-                  </mat-menu>
 
-      
+        <button (click)="Logout()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+          <!--here use avatar tag to display our image or starting letter of name-->
+          <img class="accountbutton" src="../../../assets/account_circle_black_24dp.svg" alt="">
+        </button>
+
+      </div>
     </mat-toolbar>
 
-    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav-container class="example-sidenav-container">
       <mat-sidenav mode="side" id="sidenav" [class.menu-open]="!isMenuOpen" [class.menu-close]="isMenuOpen" opened #snav
-        [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
-        <div class="container">
+        >
+        <div class="container" (mouseover)='onToolbarMenuToggle()' (mouseout)='onToolbarMenuToggle()'>
           <mat-nav-list>
             <div class="iconsandlist">
-              <button mat-button class="sidenav-button" (mouseover)='onToolbarMenuToggle()' (mouseout)='onToolbarMenuToggle()' >
+              <button mat-button class="sidenav-button" (click)="notes()">
                 <img class="sidenav-img" src="../../../assets/lightbulb_black_24dp.svg" alt="">
                 Notes
               </button>
             </div>
             <div class="iconsandlist">
-              <button mat-button class="sidenav-button" (mouseover)='onToolbarMenuToggle()' (mouseout)='onToolbarMenuToggle()' >
+              <button mat-button class="sidenav-button" >
                 <img class="sidenav-img" src="../../../assets/notifications_black_24dp.svg" alt="">
                 Reminders
               </button>
             </div>
             <div class="iconsandlist">
-              <button mat-button class="sidenav-button" (mouseover)='onToolbarMenuToggle()' (mouseout)='onToolbarMenuToggle()'>
+              <button mat-button class="sidenav-button">
                 <img class="sidenav-img" src="../../../assets/mode_black_24dp.svg" alt="">
                 Edit labels
               </button>
             </div>
             <div class="iconsandlist">
-              <button mat-button class="sidenav-button" (mouseover)='onToolbarMenuToggle()' (mouseout)='onToolbarMenuToggle()'>
+              <button mat-button class="sidenav-button">
                 <img class="sidenav-img" src="../../../assets/archive_black_24dp.svg" alt="">
                 Archives
               </button>
             </div>
             <div class="iconsandlist">
-              <button mat-button class="sidenav-button" (mouseover)='onToolbarMenuToggle()' (mouseout)='onToolbarMenuToggle()' >
+              <button mat-button class="sidenav-button">
                 <img class="sidenav-img" src="../../../assets/delete_black_24dp.svg" alt="">
                 Trash
               </button>
@@ -98,6 +102,6 @@
       </mat-sidenav-content>
 
     </mat-sidenav-container>
-    <!-- </div> -->
+    
   </div>
 </div>
