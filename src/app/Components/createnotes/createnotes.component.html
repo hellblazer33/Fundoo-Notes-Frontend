@@ -38,7 +38,7 @@
                     <img class="pin" src="../../../assets/push_pin_black_24dp.svg" alt="">
 
                 </button>
-
+                
                 
 
                 <input class="note2" matInput type="text" placeholder="Take a note..." formControlName="description">
@@ -52,6 +52,10 @@
                     <button style="margin-left: 65%;" (click)="onSubmit()" mat-stroked-button>close</button>
 
                 </div>
+
+                <mat-card-content class="matcardicons">
+                    <app-icons></app-icons>    <!--this is used for data sharing between icons and displaynotes & is child of displaynotes-->
+                </mat-card-content>
 
             </div>
         </div>

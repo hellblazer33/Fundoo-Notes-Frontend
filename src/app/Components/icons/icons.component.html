@@ -59,10 +59,10 @@
             </button>
             <mat-menu #colorMenu="matMenu">
                 <button mat-menu-item>
-                    <button 
-                       >
+                    <button *ngFor="let noteColor of colors" mat-mini-fab [style.background]="noteColor?.bgColorValue"
+                        (click)="changeColor(noteColor?.bgColorValue)">
                     </button>
-                   
+                    <!-- <span (click)="changeColor()"></span>  -->
                 </button>
             </mat-menu>
 

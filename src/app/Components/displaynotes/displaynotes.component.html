@@ -2,7 +2,7 @@
 
   <div *ngFor="let note of notesArraylist;">
 
-    <mat-card class="example-card">
+    <mat-card class="example-card" [style.background]="note.color">
 
       <mat-card-title (click)="openDialog(note)">
 

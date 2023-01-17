@@ -37,6 +37,12 @@ export class DashboardComponent implements OnInit {
     this.route.navigateByUrl('dashboard/getallnotes')
   }
 
+  Archive() {
+    this.route.navigateByUrl('dashboard/archieve')
+  }
+  Trash() {
+    this.route.navigateByUrl('dashboard/trash')
+  }
   
 
   Logout() {

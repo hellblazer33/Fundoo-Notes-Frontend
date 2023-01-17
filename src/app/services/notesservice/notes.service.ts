@@ -73,4 +73,16 @@ export class NotesService {
    }
 
 
+   usercolor(data:any){   
+     
+    let header= {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization':'Bearer '+this.token
+      })
+    }
+    return this.httpService.putService(`notes/color?notesId=${data.notesId}&color=${data.color}`,data,true,header)
+   }
+
+
 }

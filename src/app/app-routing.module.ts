@@ -12,6 +12,8 @@ import { GetallnotesComponent } from './Components/getallnotes/getallnotes.compo
 import { RegistrationComponent } from './Components/registration/registration.component';
 
 import { SigninComponent } from './Components/signin/signin.component';
+import { TrashComponent } from './Components/trash/trash.component';
+import { ArchieveComponent } from './Components/archieve/archieve.component';
 
 
 
@@ -27,7 +29,9 @@ const routes: Routes = [
      
     children:[
      { path:'', redirectTo:"/dashboard/getallnotes", pathMatch:'full' },
-     { path:'getallnotes',component:GetallnotesComponent},   
+     { path:'getallnotes',component:GetallnotesComponent},  
+     {path:'trash',component:TrashComponent},
+      {path:'archieve',component:ArchieveComponent} 
       
     ]}, 
   

@@ -45,6 +45,8 @@ import {MatNativeDateModule} from '@angular/material/core'
 import { DisplaynotesComponent } from './Components/displaynotes/displaynotes.component';
 import { IconsComponent } from './Components/icons/icons.component';
 import { UpdateComponent } from './Components/update/update.component';
+import { TrashComponent } from './Components/trash/trash.component';
+import { ArchieveComponent } from './Components/archieve/archieve.component';
 // import { MatMomentDateModule } from "@angular/material-moment-adapter";
 
 
@@ -61,7 +63,10 @@ import { UpdateComponent } from './Components/update/update.component';
     DashboardComponent,
     DisplaynotesComponent,
     IconsComponent,
-    UpdateComponent
+    UpdateComponent,
+    ArchieveComponent,
+    TrashComponent
+    
     
     
     

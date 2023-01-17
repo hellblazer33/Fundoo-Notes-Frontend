@@ -11,6 +11,8 @@ import { NotesService } from 'src/app/services/notesservice/notes.service';
 export class CreatenotesComponent implements OnInit {
 
   
+
+  
   createnotesForm!: FormGroup;
   // submitted = false;
 
