@@ -1,8 +1,8 @@
 <div fxLayout="row wrap" fxLayoutGap="20px grid" style="padding-top: 5%; padding-left: 10%;">
 
-  <div *ngFor="let note of notesArraylist;">
+  <div *ngFor="let note of notesArraylist | searchnote:searchword">
 
-    <mat-card class="example-card" [style.background]="note.color">
+    <mat-card class="example-card"  [style.background]="note.color">
 
       <mat-card-title (click)="openDialog(note)">
 
@@ -18,7 +18,12 @@
       </mat-card-subtitle>
       
       <mat-card-content class="matcardicons">
-        <app-icons [notecard]="note"></app-icons>    <!--this is used for data sharing between icons and displaynotes & is child of displaynotes-->
+        <div *ngIf="note.isTrash===true">
+          <app-trashicons [notecard]="note"></app-trashicons>
+        </div>
+      <div *ngIf="note.isTrash===false">
+        <app-icons [notecard]="note" (iconstodisplay)="recievefromiconstodisplaycard($event)" ></app-icons> 
+        </div>   
     </mat-card-content>
       
     </mat-card>

@@ -7,26 +7,22 @@
           aria-label="Example icon-button with menu icon">
           <mat-icon>menu</mat-icon>
         </button>
-        <!-- <button>
-          <mat-icon (click)="sidenav.toggle();" style="color: grey; cursor: pointer;">menu</mat-icon>
-        </button> -->
+       
       </div>
 
-      <!-- <div class="keepimageandbutton"> -->
+     
       <img class="keepimg" src="../../../assets/keep_2020q4_48dp.png" alt="">
       <h1 style="display: inline-block;font-family: 'Product Sans',Arial,sans-serif;font-size: 22px;color: #5f6368;opacity: 1;
       vertical-align: middle; cursor: pointer;line-height: 24px;padding-left: 4px;">Fundoo</h1>
       <span class="example-spacer"></span>
 
-      <!-- </div> -->
+     
 
       <div class="Search">
         <mat-form-field appearance="outline" [style.width.px]="600">
           <mat-label>Search</mat-label>
-          <!-- <img
-            style="opacity: 0.54; width: 30px; height: 30px; background-color: white; margin-top: 20%; position: relative; top: -10%;"
-            src="../../../assets/search_black_24dp.svg" alt=""> -->
-          <input matInput placeholder="Search">
+          
+          <input matInput placeholder="Search" (keyup)="searchTitle($event)" >
         </mat-form-field>
       </div>
 
@@ -47,9 +43,12 @@
           <img class="appbutton" src="../../../assets/apps_black_24dp.svg" alt="">
         </button>
 
-        <button (click)="Logout()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-          <!--here use avatar tag to display our image or starting letter of name-->
-          <img class="accountbutton" src="../../../assets/account_circle_black_24dp.svg" alt="">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+          
+          <img type="image" class="accountbutton" src="../../../assets/account_circle_black_24dp.svg" height="28px" width="28px" [matMenuTriggerFor]="menu">
+          <mat-menu #menu="matMenu">
+              <button  mat-menu-item (click)="Logout()">Logout</button>
+            </mat-menu>
         </button>
 
       </div>

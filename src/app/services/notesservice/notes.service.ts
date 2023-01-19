@@ -85,4 +85,15 @@ export class NotesService {
    }
 
 
+   deletenote(data:any){
+    let header={
+      headers: new HttpHeaders({
+        'Content-Type':'application/json',
+        'Authorization':'Bearer '+this.token
+      })
+    }
+    return this.httpService.deleteService(`Notes/Delete?id=${data.id}&noteId=${data.notesId}`,data,true,header)
+  }
+
 }
+

@@ -47,6 +47,8 @@ import { IconsComponent } from './Components/icons/icons.component';
 import { UpdateComponent } from './Components/update/update.component';
 import { TrashComponent } from './Components/trash/trash.component';
 import { ArchieveComponent } from './Components/archieve/archieve.component';
+import { SearchnotePipe } from './pipe/searchnote.pipe';
+import { TrashiconsComponent } from './Components/trashicons/trashicons.component';
 // import { MatMomentDateModule } from "@angular/material-moment-adapter";
 
 
@@ -65,7 +67,9 @@ import { ArchieveComponent } from './Components/archieve/archieve.component';
     IconsComponent,
     UpdateComponent,
     ArchieveComponent,
-    TrashComponent
+    TrashComponent,
+    SearchnotePipe,
+    TrashiconsComponent
     
     
     

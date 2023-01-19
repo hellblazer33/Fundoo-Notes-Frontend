@@ -10,6 +10,7 @@ import { NotesService } from 'src/app/services/notesservice/notes.service';
 export class IconsComponent implements OnInit {
   
   @Input() notecard:any;
+  @Output() iconstodisplay = new EventEmitter<string>()
   color : any
   
   showIcons: boolean = true;
@@ -53,6 +54,7 @@ export class IconsComponent implements OnInit {
       console.log("Note is deleted");
       
       console.log(response)
+      this.iconstodisplay.emit(response);
 
        
     })

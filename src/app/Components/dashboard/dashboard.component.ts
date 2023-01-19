@@ -1,6 +1,7 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
+import { DataService } from 'src/app/services/dataservice/data.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,11 +11,13 @@ import { Router } from '@angular/router';
 export class DashboardComponent implements OnInit {
   isMenuOpen = true;
   contentMargin = 200;
+ 
+  
 
  
 
 
-  constructor(private route: Router) {
+  constructor(private route: Router,changeDetectorRef: ChangeDetectorRef,private data:DataService) {
 
   }
   ngOnInit(): void {
@@ -49,6 +52,12 @@ export class DashboardComponent implements OnInit {
     localStorage.removeItem('token');
     this.route.navigateByUrl('/signin')
   }
+
+
+  searchTitle(event: any){
+    
+    this.data.changeData(event.target.value)
+    }
 }
 
 

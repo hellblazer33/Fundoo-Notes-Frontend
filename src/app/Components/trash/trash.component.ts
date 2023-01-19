@@ -1,5 +1,10 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NotesService } from 'src/app/services/notesservice/notes.service';
+
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { UpdateComponent } from '../update/update.component';
+
+
 
 @Component({
   selector: 'app-trash',
@@ -7,19 +12,42 @@ import { NotesService } from 'src/app/services/notesservice/notes.service';
   styleUrls: ['./trash.component.scss']
 })
 export class TrashComponent implements OnInit {
+  @Input() notecard:any; 
   token:any;
   trashNotes:any;
   localnotes:any;
+  title:any;
+  description:any;
+  dialogRef: any;
   
 
-  constructor(private notes:NotesService) { 
+  constructor(private notes:NotesService,public dialog: MatDialog) { 
     this.token = localStorage.getItem('token');
   }
-  
 
   ngOnInit(): void {
     this.getAllTrashNotes();
   }
+  
+  openDialog(note: any): void {
+    const dialogRef = this.dialog.open(UpdateComponent, {
+      width: '650px',     
+      data: note,
+    });
+
+ 
+
+    dialogRef.afterClosed().subscribe(result => {
+      
+      this.title=result;
+      this.description=result;
+      
+    });
+    
+  
+  }
+
+ 
 
   getAllTrashNotes(){
     this.notes.usergetallnotes().subscribe((response:any)=> {
