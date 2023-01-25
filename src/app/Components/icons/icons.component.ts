@@ -46,7 +46,8 @@ export class IconsComponent implements OnInit {
 
     let reqdata= {
       
-      notesId: [this.notecard.notesId],  
+      notesId: [this.notecard.notesId], 
+       
        
     }
     console.log(reqdata)
@@ -72,6 +73,7 @@ export class IconsComponent implements OnInit {
       console.log("Note is archived");
 
       console.log(response);
+      this.iconstodisplay.emit(response)
       
         
     })
@@ -89,6 +91,7 @@ export class IconsComponent implements OnInit {
       console.log("Note is Unarchived");
 
       console.log(response);
+      this.iconstodisplay.emit(response)
       
        
     })
@@ -110,7 +113,7 @@ export class IconsComponent implements OnInit {
 
     this.note.usercolor(reqdata).subscribe((response:any) =>{
       console.log("****Color changed successfully**********)",response);
-
+      this.iconstodisplay.emit(response)
       
       
 

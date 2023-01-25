@@ -11,6 +11,7 @@ export class TrashiconsComponent implements OnInit{
 
   @Input() notecard:any;
   @Input() color:any
+  @Output() iconstodisplay = new EventEmitter<string>()
 
   title:any;
   description:any;
@@ -30,9 +31,11 @@ export class TrashiconsComponent implements OnInit{
     }
     console.log(reqdata)
     this.note.userdeletenotes(reqdata).subscribe((response:any) =>{
-      console.log("Note is deleted");
+      console.log("Note is undeleted");
       
       console.log(response)
+      this.iconstodisplay.emit(response)
+
     })
   }
   
@@ -40,7 +43,10 @@ export class TrashiconsComponent implements OnInit{
 
   isDelete(){
     this.note.deletenote(this.notecard).subscribe((response:any)=>{
+
       console.log(response)
+
+      this.iconstodisplay.emit(response);
     })
   }
 

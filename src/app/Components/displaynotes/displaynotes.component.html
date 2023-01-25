@@ -4,7 +4,7 @@
 
     <mat-card class="example-card"  [style.background]="note.color">
 
-      <mat-card-title (click)="openDialog(note)">
+      <mat-card-title (click)="openDialog(note)" >
 
         {{note.title }}
 
@@ -19,7 +19,7 @@
       
       <mat-card-content class="matcardicons">
         <div *ngIf="note.isTrash===true">
-          <app-trashicons [notecard]="note"></app-trashicons>
+          <app-trashicons [notecard]="note" (iconstodisplay)="recievefromiconstodisplaycard($event)"></app-trashicons>
         </div>
       <div *ngIf="note.isTrash===false">
         <app-icons [notecard]="note" (iconstodisplay)="recievefromiconstodisplaycard($event)" ></app-icons> 

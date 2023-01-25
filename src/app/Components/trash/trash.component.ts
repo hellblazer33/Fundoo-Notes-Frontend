@@ -13,12 +13,14 @@ import { UpdateComponent } from '../update/update.component';
 })
 export class TrashComponent implements OnInit {
   @Input() notecard:any; 
+  @Output() trashiconstotrash = new EventEmitter<string>();
   token:any;
   trashNotes:any;
   localnotes:any;
   title:any;
   description:any;
   dialogRef: any;
+  msg:any;
   
 
   constructor(private notes:NotesService,public dialog: MatDialog) { 
@@ -58,7 +60,9 @@ export class TrashComponent implements OnInit {
        this.trashNotes.reverse()
       })
   }
-
-  
+  receiveMessagefromdisplaycard($event: any) {
+    console.log("insidegetallnotes", $event);
+    this.getAllTrashNotes()
+  }
 
 }

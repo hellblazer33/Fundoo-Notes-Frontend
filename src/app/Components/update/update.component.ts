@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, Output,EventEmitter} from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { NotesService } from 'src/app/services/notesservice/notes.service';
 
@@ -15,6 +15,8 @@ export class UpdateComponent implements OnInit {
     public dialogRef: MatDialogRef<UpdateComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,   
   ) {}
+
+  @Output() iconstodisplay = new EventEmitter<string>()
 
   onNoClick(): void {
     this.dialogRef.close();
@@ -40,8 +42,11 @@ export class UpdateComponent implements OnInit {
 
     this.note.userupdatenotes(updatenoteobject).subscribe((response:any) => {
       console.log("*******Notes updated successfull************",response)
+      this.iconstodisplay.emit(response);
+
     })
     this.dialogRef.close()  
+    
     //window.location.reload();
   }
 

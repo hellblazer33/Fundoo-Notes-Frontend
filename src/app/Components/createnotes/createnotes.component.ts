@@ -21,6 +21,8 @@ export class CreatenotesComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private note: NotesService) { }
 
+  @Output()messageEvent = new EventEmitter<any>();
+
   ngOnInit(): void {
     this.createnotesForm = this.formBuilder.group({
       title: ['', Validators.required],
@@ -47,11 +49,19 @@ export class CreatenotesComponent implements OnInit {
       this.note.usercreatenotes(createnote).subscribe((response: any) => {
         console.log("*****Note Created Successfull*****",response);
 
-        
+        this.messageEvent.emit(response)
       })
 
     } else {
       console.log("enter data");
     }
+   
+
+  }
+
+
+  receivemessage(event:any){
+    this.messageEvent.emit(event)
+  
   }
 }

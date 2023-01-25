@@ -42,6 +42,7 @@ export class DisplaynotesComponent implements OnInit {
       this.title=result;
       this.description=result;
       
+      
     });
     
   }
@@ -52,5 +53,7 @@ export class DisplaynotesComponent implements OnInit {
     this.displaytogetallnotes.emit(this.msg)
   }
  
+  
+  
 
 }
