@@ -22,6 +22,8 @@
 .h1{
   color: royalblue;
   cursor: pointer;
+  font-size: 22px;
+  padding-left: 4px
 
 }
 .Search{
@@ -191,3 +193,28 @@
   .account{
     padding-left: 50px;
   }
+
+
+
+  @media (max-width: 480px) {
+    .Search{
+      margin-left: 1em;
+      margin-top: 1em;
+      text-align: center;
+      padding-top: 21px;
+      padding-bottom: 20px;
+      font-size: 15px;
+      border-right-width: 50em;
+      // background: transparent;
+      background-color: transparent;
+      width: calc(100% - 63px);
+}
+
+.hide{
+  font-size: 15px;
+  padding-left: 0%;
+}
+  }
+
+
+  

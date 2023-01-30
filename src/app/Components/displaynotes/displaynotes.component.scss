@@ -54,3 +54,16 @@
   .example-card:hover .pin{
     visibility: visible;
   }
+
+
+  
+@media only screen and (max-width: 414px){
+  .example-card {
+    
+    width: 250px;
+    border: 1px solid gainsboro ;
+    height: auto;
+    
+    border-radius: 15px;
+  }
+}

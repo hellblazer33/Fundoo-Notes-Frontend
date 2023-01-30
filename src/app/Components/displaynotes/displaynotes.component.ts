@@ -13,6 +13,7 @@ export class DisplaynotesComponent implements OnInit {
 
   @Input() notesArraylist:any; 
   @Output() displaytogetallnotes=new EventEmitter<string>();   
+  @Output() updatetodisplaytogetall=new EventEmitter<string>(); 
   
   title:any;
   description:any;
@@ -39,9 +40,10 @@ export class DisplaynotesComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       
-      this.title=result;
-      this.description=result;
       
+      
+      this.updatetodisplaytogetall.emit(result)
+
       
     });
     

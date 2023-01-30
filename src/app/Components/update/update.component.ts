@@ -16,7 +16,7 @@ export class UpdateComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: any,   
   ) {}
 
-  @Output() iconstodisplay = new EventEmitter<string>()
+  @Output() updatetodisplay = new EventEmitter<string>()
 
   onNoClick(): void {
     this.dialogRef.close();
@@ -42,10 +42,10 @@ export class UpdateComponent implements OnInit {
 
     this.note.userupdatenotes(updatenoteobject).subscribe((response:any) => {
       console.log("*******Notes updated successfull************",response)
-      this.iconstodisplay.emit(response);
+      this.dialogRef.close(response) 
 
     })
-    this.dialogRef.close()  
+    
     
     //window.location.reload();
   }
