@@ -139,7 +139,7 @@
 .closebutton1{
     
     margin-top: -0%;
-    margin-left: +50%;
+    margin-left: +150%;
     height: 28%;
     width: 80%;
     margin-bottom: -5%;
@@ -156,25 +156,48 @@
 
 
 @media only screen and (max-width: 414px){
+    .closebutton1{
+    
+        
+        margin-top: 0%;
+        margin-left: 100%;
+        height: 28%;
+        width: 60%;
+        margin-bottom: -5%;
+        position: absolute;
+        padding-top: 93px;
+        padding-right: 90px;
+        
+          
+    }
+
+    .close{
+        // padding-left: 210px;
+        // padding-bottom: 50px;
+        
+    }
+
+ 
+    
+    
+    
     .createnote{
       
       
         
     }
     .matform1{
-        border: 2px solid red;
-        width: 250px; 
+        width: 211px;
         height: 20px;
-        
         margin-top: 10px;
-        margin-left: 50px;
+        margin-left: 19px;
         border: none;
         padding-bottom: 100px;
         
     }
     .title{
     
-        height: 200px;
+        height: auto;
         display: flex;
         position: relative;
         top: 5%;
@@ -201,8 +224,8 @@
         justify-content: start;
         margin-top:-20%; 
         position: relative;
-        top: 30%;
-        margin-bottom:1%;
+        top: 50px;
+        margin-bottom:15px;
         margin-left: 10%;
     }
     .note2{
@@ -224,11 +247,28 @@
     }
 
     .matcardicons{
-        padding-right: 150px;
+        padding-right: 52px;
         padding-top: 20px
         
         
     }
+
+
+    .pin{
+    
+        margin-left: 210%;
+        margin-top: -6%; 
+        
+        width: 25px; 
+        height: 25px;
+        opacity: 0.54;
+        position: relative;
+        top: -10%;
+        cursor: pointer;
+    
+    
+    }
+    
 
     
 

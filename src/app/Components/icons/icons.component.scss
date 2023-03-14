@@ -71,6 +71,7 @@
     // background-color: white;
 
 }
+
 .trashIcons{
     // border: 5px solid transparent;
     // border: 2px solid red;
@@ -98,24 +99,27 @@ p{
 @media (max-width: 480px){
     .iconbutton1{
         cursor: pointer;
-        justify-content: space-around;
+        
         border: none;
         background: none;
         padding-left: -120px;
         // border-radius: 50px;
         // background-color: white;
+        height: 0.2em;
       
     }
     .iconbutton2{
         cursor: pointer;
         border: none;
         background: none;
+        height:1em
         // background-color: white;
     }
     .iconbutton3{
         cursor: pointer;
         border: none;
         background: none;
+        height:1em
         // background-color: white;
     }
     .iconbutton4{
@@ -123,6 +127,7 @@ p{
         border: none;
         background: none;
         // background-color: white;
+        height:1em
     
     }
     .iconbutton5{
@@ -130,6 +135,7 @@ p{
         border: none;
         background: none;
         // background-color: white;
+        height:1em
     
     }
     .iconbutton6{
@@ -137,6 +143,7 @@ p{
         border: none;
         background: none;
         // background-color: white;
+        height:1em
     
     }
     .trashIcons{
@@ -154,4 +161,43 @@ p{
         opacity: 0.54;
         // padding-left: -5%;
       }
+
+      .icons {
+        cursor: pointer;
+        //justify-content: center;
+        margin-left: 0%;
+    }
+
+    .section{
+        font-family: "Roboto", arial, sans-serif;
+        width: 0.2%;
+        height: 7%;
+        position: relative;
+        left: 55%;
+        top: 5%;
+    }
+
+    .iconsandbuttons{
+        // border: 2px solid yellow;
+        margin-left: 40%;
+        display: flex;
+        position: relative;
+        // right: 52%;
+        // border: none;
+        opacity: 0.6;
+        width: 25px;
+        padding-left:40%;
+
+        // background-color: white;
+        // display: none;
+    }
+
+    .icontxt{
+        display: flex;
+        align-items: center;
+        height: 40px;
+        margin-left: 25px;
+        cursor: pointer;
+        margin-bottom: 2px;
+    }
 }

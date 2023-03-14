@@ -92,7 +92,7 @@ export class NotesService {
         'Authorization':'Bearer '+this.token
       })
     }
-    return this.httpService.deleteService(`Notes/Delete?id=${data.id}&noteId=${data.notesId}`,data,true,header)
+    return this.httpService.deleteService(`Notes/Delete?id=${data.id}&noteId=${data.notesId}`,true,header)
   }
 
 }

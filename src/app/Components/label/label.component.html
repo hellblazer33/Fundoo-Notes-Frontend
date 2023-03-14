@@ -1,0 +1,48 @@
+<p>label works!</p>
+<h3 mat-dialog-title>Edit labels</h3>
+<mat-dialog-content class="dialogbox">
+    <div class="createbtns">
+        <div *ngIf="lblTrashtoggle==false">
+            <button mat-icon-button (click)="reverseFlag()">
+                <img id="button" src="/assets/cancel.svg">
+            </button>
+        </div>
+        <div *ngIf="lblTrashtoggle==true">
+            <button mat-icon-button (click)="reverseFlag()">
+                <img id="button" src="/assets/plus.svg">
+            </button>
+        </div>
+        <div>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="Create new Label" [(ngModel)]="labelName">
+            </mat-form-field>
+        </div>
+        <div *ngIf="lblTrashtoggle==false">
+            <button mat-icon-button matTooltip="add label">
+                <img id="button" src="/assets//pen.svg" />
+            </button>
+        </div>
+    </div>
+    <div class="addedlabels">
+        <div class="singlelbl" *ngFor="let label of labelArray">
+            <div class="withhover">
+                <button mat-icon-button (click)="deleteLabel(label.labelId)">
+                    <img id="button" src="/assets/trash.svg">
+                </button>
+            </div>
+            <div class="inpbox">
+                <input class="inputlbl" matInput [(ngModel)]="label.labelName">
+            </div>
+            <button mat-icon-button *ngIf='editdeletetoggle==true' (click)="reverse()">
+                <img id="button" src="/assets/right.svg" />
+            </button>
+            <button mat-icon-button *ngIf='editdeletetoggle==false' (click)="reverse()">
+                <img id="button" src="/assets/pen.svg" />
+            </button>
+        </div>
+        
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="addLabel()">Done</button>
+</mat-dialog-actions>

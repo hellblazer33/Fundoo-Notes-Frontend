@@ -2,6 +2,7 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
 import { DataService } from 'src/app/services/dataservice/data.service';
+import { trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,15 +10,16 @@ import { DataService } from 'src/app/services/dataservice/data.service';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  isMenuOpen = true;
+  isMenuOpen = false;
   contentMargin = 200;
- 
+  display = true;
+  isViewChange: boolean = false;
   
 
  
 
 
-  constructor(private route: Router,changeDetectorRef: ChangeDetectorRef,private data:DataService) {
+  constructor(private route: Router,changeDetectorRef: ChangeDetectorRef,private dataService:DataService) {
 
   }
   ngOnInit(): void {
@@ -36,6 +38,12 @@ export class DashboardComponent implements OnInit {
     }
   }
 
+  viewChange(){
+    this.isViewChange = !this.isViewChange;
+    this.dataService.SendDisplayData(this.isViewChange);
+    //window.location.reload();
+  }
+
   notes() {
     this.route.navigateByUrl('dashboard/getallnotes')
   }
@@ -47,17 +55,25 @@ export class DashboardComponent implements OnInit {
     this.route.navigateByUrl('dashboard/trash')
   }
   
+  Reminder() {
+    this.route.navigateByUrl('dashboard/reminderNotes')
+  }
 
   Logout() {
     localStorage.removeItem('token');
     this.route.navigateByUrl('/signin')
   }
 
+  label() {
+    this.route.navigateByUrl('dashboard/label')
+  }
 
   searchTitle(event: any){
     
-    this.data.changeData(event.target.value)
+    this.dataService.changeData(event.target.value)
     }
+
+   
 }
 
 

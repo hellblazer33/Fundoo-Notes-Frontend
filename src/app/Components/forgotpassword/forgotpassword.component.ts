@@ -18,6 +18,7 @@ export class ForgotpasswordComponent implements OnInit {
 
     this.forgotpasswordForm = this.formBuilder.group({
       newpassword: ['', [Validators.required, Validators.minLength(6)]],  
+      confirmPassword: ['', [Validators.required, Validators.minLength(6)]],  
     })
     this.token = localStorage.getItem("token");
     console.log(this.token);

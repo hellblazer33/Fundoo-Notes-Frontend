@@ -1,6 +1,9 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { NotesService } from 'src/app/services/notesservice/notes.service';
-
+import { LabelComponent } from '../label/label.component';
+import { MatDialog } from '@angular/material/dialog';
+import { LabelService } from 'src/app/services/labelservice/label.service';
+import { CollabnotesComponent } from '../collabnotes/collabnotes.component';
 
 @Component({
   selector: 'app-icons',
@@ -11,11 +14,17 @@ export class IconsComponent implements OnInit {
   
   @Input() notecard:any;
   @Output() iconstodisplay = new EventEmitter<string>()
-  color : any
+  @Output() updateCollabUser = new EventEmitter<any>();
+  @Output() changeNoteStatus = new EventEmitter<any>();
+  color : any;
+  labelArray:any=[];
+  labelName:string='';
+  label:any;
+  collabUserData: any = [];
   
   showIcons: boolean = true;
 
-  colors = [
+  colors1 = [
     {
       name: 'Red', bgColorValue: '#f28b82' 
     },  
@@ -26,18 +35,21 @@ export class IconsComponent implements OnInit {
     {
       name: 'Light Green', bgColorValue: '#E4E978'
     },
-    {
-      name: 'Lime', bgColorValue: '#B3E283'
-    },
-    {
-      name: 'Teal', bgColorValue: '#CDF0EA'
-    },
-    {
-      name: 'white', bgColorValue: '#ffffff'
-    }
+  
   ];
+ colors2 = [
+  {
+    name: 'Lime', bgColorValue: '#B3E283'
+  },
+  {
+    name: 'Teal', bgColorValue: '#CDF0EA'
+  },
+  {
+    name: 'white', bgColorValue: '#ffffff'
+  }
+ ]
  
-  constructor(private note: NotesService ) { }
+  constructor(private note: NotesService,public dialog: MatDialog,private labelservice:LabelService ) { }
 
   ngOnInit(): void {
   }
@@ -120,6 +132,64 @@ export class IconsComponent implements OnInit {
     })
     
   }
+
+    //getall Labels API
+    getallLabels(){
+      this.labelservice.getallLabels().subscribe((response:any)=>{
+        console.log('Getting All Labels List',response)
+        this.labelArray=response.data
+      })
+    }
+  
+    getlabelById(labelId:number){
+      this.labelservice.getlabelById(labelId).subscribe((response:any)=>{
+        console.log("Get Label by Id",response);
+        
+      })
+    }
+  
+    // addLabel(){
+    //   let data={
+    //     noteId:this.labelArray.noteId,
+    //     labelName:this.labelName
+    //   }
+    //   console.log(data);  
+    //   this.labelservice.addLabel(data).subscribe((response:any)=>{
+    //     console.log('Label Added',response)
+    //     this.getallLabels();
+    //   })
+    // }
+     //Dialog box
+  
+     
+     openDialog(note:any) {
+      const dialogRef = this.dialog.open(LabelComponent,{
+        
+        data:note
+      })
+  
+      dialogRef.afterClosed().subscribe(result => {
+        console.log(`Dialog result: ${result}`);
+      });
+    }
+    
+
+    addCollaborator(noteData: any) {
+      
+        const dialogRef = this.dialog.open(CollabnotesComponent, {
+          width: '600Px',
+          maxHeight: '650Px',
+          data: noteData,
+        });
+        dialogRef.afterClosed().subscribe((result: any) => {
+          console.log('The collab dialog was closed:', result);
+          this.collabUserData = result;
+          console.log(this.collabUserData)
+          this.iconstodisplay.emit(result);
+          //this.iconstodisplay.emit(result.slice(1));
+        });
+      
+    }
 
   
 

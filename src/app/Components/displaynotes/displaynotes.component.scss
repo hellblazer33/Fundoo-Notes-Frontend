@@ -7,8 +7,17 @@
     
     border-radius: 15px;
   }
-  
-
+  .display_note {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+} 
+.display_note_grid {
+  display: grid;
+  justify-content: center;
+  //  margin-left: 150px;
+  width: 90%;
+}
 .pinbutton{
     
     border: none; 
@@ -21,7 +30,7 @@
 
   .pin{
     
-    margin-left: 140px;
+    margin-left: 150px;
     margin-top: 5%;
     margin-bottom: -7px;
     opacity: 0.54;
@@ -32,6 +41,14 @@
     background: none;
     visibility: hidden;
 
+  }
+  .example-card2{
+    width: 800px;
+    border: 1px solid gainsboro ;
+    height: auto;
+    
+    border-radius: 15px;
+    margin-left: 250px;
   }
 
   .matcardicons{

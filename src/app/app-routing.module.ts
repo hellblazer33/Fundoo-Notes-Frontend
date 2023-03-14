@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AuthenticationGuard } from './Components/authentication.guard';
+import { AuthenticationGuard } from './authentication.guard';
 import { CreatenotesComponent } from './Components/createnotes/createnotes.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 
@@ -17,9 +17,10 @@ import { ArchieveComponent } from './Components/archieve/archieve.component';
 
 
 
+
 const routes: Routes = [ 
    { path:'', redirectTo:"/signin", pathMatch:'full' },
-
+   
   { path:'register',component:RegistrationComponent},
   { path:'signin',component:SigninComponent},
   { path:'forgotemail',component:ForgotemailComponent},
@@ -34,6 +35,8 @@ const routes: Routes = [
       {path:'archieve',component:ArchieveComponent} 
       
     ]}, 
+
+    
   
     
 ];

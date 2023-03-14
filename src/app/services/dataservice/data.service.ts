@@ -11,9 +11,16 @@ export class DataService {
 
   private searchData = new BehaviorSubject("default message");
   searchNote = this.searchData.asObservable()
+  private noteDisplay = new BehaviorSubject('');
+  recievedNoteDisplay = this.noteDisplay.asObservable();
+
   changeData(message:string){
     this.searchData.next(message)
   
+} 
+SendDisplayData(layout: any){
+  this.noteDisplay.next(layout)
 }
+
 
 }

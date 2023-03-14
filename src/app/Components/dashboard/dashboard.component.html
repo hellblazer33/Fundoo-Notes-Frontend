@@ -3,61 +3,68 @@
     <mat-toolbar>
 
       <div class="menubutton">
-        <button mat-icon-button (mouseover)='onToolbarMenuToggle()' (mouseout)='onToolbarMenuToggle()' class="example-icon"
+        <button mat-icon-button (click)="onToolbarMenuToggle()" class="example-icon"
           aria-label="Example icon-button with menu icon">
           <mat-icon>menu</mat-icon>
         </button>
-       
+
       </div>
 
-     
+
       <img class="keepimg" src="../../../assets/keep_2020q4_48dp.png" alt="">
       <h1 class="hide" style="display: inline-block;font-family: 'Product Sans',Arial,sans-serif;color: #5f6368;opacity: 1;
       vertical-align: middle; cursor: pointer;line-height: 24px;">Fundoo</h1>
       <span class="example-spacer"></span>
 
-     
+
 
       <div class="Search">
         <mat-form-field appearance="outline" [style.width.px]="600">
           <mat-label>Search</mat-label>
-          
-          <input matInput placeholder="Search" (keyup)="searchTitle($event)" >
+
+          <input matInput placeholder="Search" (keyup)="searchTitle($event)">
         </mat-form-field>
       </div>
 
-      <div class="refreshandsetting">
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-          <img class="refreshbutton" src="../../../assets/refresh_black_24dp.svg" alt="">
-        </button>
 
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <img class="refreshbutton" src="../../../assets/refresh_black_24dp.svg" alt="">
+      </button>
+      <div class="view">
+        <button *ngIf="!isViewChange" mat-icon-button class="example-icon2"
+          aria-label="Example icon-button with menu icon" (click)="viewChange()">
           <img class="viewbutton" src="../../../assets/view_agenda_black_24dp.svg" alt="">
         </button>
-
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-          <img class="settingbutton" src="../../../assets/settings_black_24dp.svg" alt="">
+        <button *ngIf="isViewChange" mat-icon-button class="example-icon2" (click)="viewChange()">
+          <img class="viewbutton"
+            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZGVmcz4KICAgICAgICA8cGF0aCBkPSJNMywzIEwxMCwzIEMxMC41NSwzIDExLDMuNDUgMTEsNCBMMTEsMTAgQzExLDEwLjU1IDEwLjU1LDExIDEwLDExIEwzLDExIEMyLjQ1LDExIDIsMTAuNTUgMiwxMCBMMiw0IEMyLDMuNDUgMi40NSwzIDMsMyBaIE0zLDEzIEwxMCwxMyBDMTAuNTUsMTMgMTEsMTMuNDUgMTEsMTQgTDExLDIwIEMxMSwyMC41NSAxMC41NSwyMSAxMCwyMSBMMywyMSBDMi40NSwyMSAyLDIwLjU1IDIsMjAgTDIsMTQgQzIsMTMuNDUgMi40NSwxMyAzLDEzIFogTTE0LDMgTDIxLDMgQzIxLjU1LDMgMjIsMy40NSAyMiw0IEwyMiwxMCBDMjIsMTAuNTUgMjEuNTUsMTEgMjEsMTEgTDE0LDExIEMxMy40NSwxMSAxMywxMC41NSAxMywxMCBMMTMsNCBDMTMsMy40NSAxMy40NSwzIDE0LDMgWiBNMTQsMTMgTDIxLDEzIEMyMS41NSwxMyAyMiwxMy40NSAyMiwxNCBMMjIsMjAgQzIyLDIwLjU1IDIxLjU1LDIxIDIxLDIxIEwxNCwyMSBDMTMuNDUsMjEgMTMsMjAuNTUgMTMsMjAgTDEzLDE0IEMxMywxMy40NSAxMy40NSwxMyAxNCwxMyBaIE05LDkgTDksNSBMNCw1IEw0LDkgTDksOSBaIE05LDE5IEw5LDE1IEw0LDE1IEw0LDE5IEw5LDE5IFogTTIwLDkgTDIwLDUgTDE1LDUgTDE1LDkgTDIwLDkgWiBNMjAsMTkgTDIwLDE1IEwxNSwxNSBMMTUsMTkgTDIwLDE5IFoiIGlkPSJwYXRoLTEiPjwvcGF0aD4KICAgIDwvZGVmcz4KICAgIDxnIGlkPSJncmlkX3ZpZXdfMjRweCIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBvbHlnb24gaWQ9ImJvdW5kcyIgZmlsbC1vcGFjaXR5PSIwIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9IjAgMCAyNCAwIDI0IDI0IDAgMjQiPjwvcG9seWdvbj4KICAgICAgICA8bWFzayBpZD0ibWFzay0yIiBmaWxsPSJ3aGl0ZSI+CiAgICAgICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI3BhdGgtMSI+PC91c2U+CiAgICAgICAgPC9tYXNrPgogICAgICAgIDx1c2UgaWQ9Imljb24iIGZpbGw9IiMwMDAwMDAiIGZpbGwtcnVsZT0ibm9uemVybyIgeGxpbms6aHJlZj0iI3BhdGgtMSI+PC91c2U+CiAgICA8L2c+Cjwvc3ZnPgo=" />
         </button>
-
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-          <img class="appbutton" src="../../../assets/apps_black_24dp.svg" alt="">
-        </button>
-
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-          
-          <img type="image" class="accountbutton" src="../../../assets/account_circle_black_24dp.svg" height="28px" width="28px" [matMenuTriggerFor]="menu">
-          <mat-menu #menu="matMenu">
-              <button  mat-menu-item (click)="Logout()">Logout</button>
-            </mat-menu>
-        </button>
-
       </div>
+      <div class="app">
+      <button mat-icon-button aria-label="Example icon-button with menu icon">
+        <img class="settingbutton" src="../../../assets/settings_black_24dp.svg" alt="">
+      </button>
+
+      <button mat-icon-button aria-label="Example icon-button with menu icon">
+        <img class="appbutton" src="../../../assets/apps_black_24dp.svg" alt="">
+      </button>
+    </div>
+
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+
+        <img type="image" class="accountbutton" src="../../../assets/account_circle_black_24dp.svg" height="28px"
+          width="28px" [matMenuTriggerFor]="menu">
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="Logout()">Logout</button>
+        </mat-menu>
+      </button>
+
+
     </mat-toolbar>
 
-    <mat-sidenav-container class="example-sidenav-container">
-      <mat-sidenav mode="side" id="sidenav" [class.menu-open]="!isMenuOpen" [class.menu-close]="isMenuOpen" opened #snav
-        >
-        <div class="container" (mouseover)='onToolbarMenuToggle()' (mouseout)='onToolbarMenuToggle()'>
+    <mat-sidenav-container mode="side" class="example-sidenav-container">
+      <mat-sidenav mode="side" id="sidenav" [(opened)]="isMenuOpen">
+        <div class="container">
           <mat-nav-list>
             <div class="iconsandlist">
               <button mat-button class="sidenav-button" (click)="notes()">
@@ -66,13 +73,13 @@
               </button>
             </div>
             <div class="iconsandlist">
-              <button mat-button class="sidenav-button" >
+              <button mat-button class="sidenav-button">
                 <img class="sidenav-img" src="../../../assets/notifications_black_24dp.svg" alt="">
                 Reminders
               </button>
             </div>
             <div class="iconsandlist">
-              <button mat-button class="sidenav-button">
+              <button mat-button class="sidenav-button" (click)="label()">
                 <img class="sidenav-img" src="../../../assets/mode_black_24dp.svg" alt="">
                 Edit labels
               </button>
@@ -98,9 +105,10 @@
 
         <router-outlet></router-outlet>
 
+
       </mat-sidenav-content>
 
     </mat-sidenav-container>
-    
+
   </div>
 </div>

@@ -9,18 +9,18 @@
                    
                     <input class="note1" type="text" matInput placeholder="Take a note...">
                     <div class="button">
-                    <button mat-icon-button class="closebutton" aria-label="Example icon-button with menu icon">
-                        <img class="checkbox" src="../../../assets/check_box_black_24dp.svg" alt="">
+                    <button mat-icon-button class="closebutton" aria-label="Example icon-button with menu icon" >
+                        <img class="checkbox" matTooltip="CheckBox" src="../../../assets/check_box_black_24dp.svg" alt="">
 
                     </button>
 
-                    <button mat-icon-button class="closebutton" aria-label="Example icon-button with menu icon">
-                        <img class="brush" src="../../../assets/brush_black_24dp.svg" alt="">
+                    <button mat-icon-button class="closebutton" aria-label="Example icon-button with menu icon" >
+                        <img class="brush" matTooltip="Brush" src="../../../assets/brush_black_24dp.svg" alt="">
 
                     </button>
 
-                    <button mat-icon-button class="closebutton" aria-label="Example icon-button with menu icon">
-                        <img class="insertphoto" src="../../../assets/insert_photo_black_24dp.svg" alt="">
+                    <button mat-icon-button class="closebutton" aria-label="Example icon-button with menu icon" >
+                        <img class="insertphoto" matTooltip="Photo" src="../../../assets/insert_photo_black_24dp.svg" alt="">
 
                     </button>
                 </div>
@@ -49,7 +49,7 @@
                     
                 
 
-                    <button style="margin-left: 65%;" (click)="onSubmit()" mat-stroked-button>close</button>
+                    <button class="close" (click)="onSubmit()" mat-stroked-button>close</button>
 
                 </div>
 

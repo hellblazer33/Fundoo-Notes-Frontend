@@ -2,13 +2,20 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DisplaynotesComponent } from './displaynotes.component';
 
+import {MatDialogModule} from '@angular/material/dialog';
+
+import { SearchnotePipe } from 'src/app/pipe/searchnote.pipe';
 describe('DisplaynotesComponent', () => {
   let component: DisplaynotesComponent;
   let fixture: ComponentFixture<DisplaynotesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DisplaynotesComponent ]
+      imports: [
+        MatDialogModule
+        
+      ],
+      declarations: [ DisplaynotesComponent,SearchnotePipe ]
     })
     .compileComponents();
   });

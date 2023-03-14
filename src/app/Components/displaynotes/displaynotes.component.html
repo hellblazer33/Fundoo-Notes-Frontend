@@ -1,33 +1,66 @@
 <div fxLayout="row wrap" fxLayoutGap="20px grid" style="padding-top: 5%; padding-left: 10%;">
+  
 
-  <div *ngFor="let note of notesArraylist | searchnote:searchword">
+    <div [ngClass]="isGridLayout == true ? 'display_note_grid' : 'display_note'"
+      *ngFor="let note of notesArraylist | searchnote:searchword">
 
-    <mat-card class="example-card"  [style.background]="note.color">
+      <mat-card class="example-card" [style.background]="note.color">
 
-      <mat-card-title (click)="openDialog(note)" >
 
-        {{note.title }}
+        <mat-card-title [ngClass]="isGridLayout == true ? 'note_title_grid' : 'note_title'" (click)="openDialog(note)"
+          [@openClose]="isOpen ? 'open' : 'closed'">
 
-      </mat-card-title>
+          {{note.title }}
 
-      <mat-card-subtitle (click)="openDialog(note)">
 
-        {{ note.description }}
+          <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <img class="pin" src="../../../assets/push_pin_black_24dp.svg" alt="">
 
-        
-      </mat-card-subtitle>
-      
-      <mat-card-content class="matcardicons">
-        <div *ngIf="note.isTrash===true">
-          <app-trashicons [notecard]="note" (iconstodisplay)="recievefromiconstodisplaycard($event)"></app-trashicons>
+          </button>
+
+        </mat-card-title>
+
+        <mat-card-subtitle [ngClass]="isGridLayout == true ? 'notes_description_grid' : 'notes_description'"
+          (click)="openDialog(note)" [@openClose]="isOpen ? 'open' : 'closed'">
+
+          {{ note.description }}
+
+
+         
+
+        </mat-card-subtitle>
+        <div class='note_titles' fxLayout="row" fxLayoutAlign="space-between center">
+          <div fxLayout="row" [ngClass]="isGridLayout == true ? 'collabImage' : 'collabImage_grid'">
+            <div *ngFor="let collabUser of collabUsersList">
+              <div *ngIf="collabUser.noteId === note.notesId" class="collabName">
+                <ngx-avatar [style]="customStyle" size="30" name="{{collabUser.firstName}}"
+                  matTooltip="{{collabUser.firstName}} {{collabUser.lastName}}"></ngx-avatar>
+              </div>
+            </div>
+          </div>
         </div>
-      <div *ngIf="note.isTrash===false">
-        <app-icons [notecard]="note" (iconstodisplay)="recievefromiconstodisplaycard($event)" ></app-icons> 
-        </div>   
-    </mat-card-content>
-      
-    </mat-card>
-    
-  </div>
+        <!-- <mat-card-content>
+      <div *ngFor="let label of labelArray" class="all-label-container">
+        {{label.labelName}}
+      </div>
+    </mat-card-content> -->
+
+        <mat-card-content class="matcardicons">
+          <div *ngIf="note.isTrash===true">
+            <app-trashicons [notecard]="note" (iconstodisplay)="recievefromiconstodisplaycard($event)"></app-trashicons>
+          </div>
+          <div *ngIf="note.isTrash===false">
+            <app-icons [notecard]="note" (iconstodisplay)="recievefromiconstodisplaycard($event)"></app-icons>
+
+          </div>
+
+        </mat-card-content>
+
+      </mat-card>
+
+    </div>
+
+  
+
 
 </div>

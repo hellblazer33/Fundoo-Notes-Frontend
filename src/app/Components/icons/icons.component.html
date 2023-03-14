@@ -1,10 +1,15 @@
+
 <div class="section" fxLayout="row" fxLayoutAlign="start center">
+
+    
 
     <div class="icons" *ngIf="showIcons" fxLayout="row" fxLayout.xs="row"
         fxFlex="50" fxFlex.xs="95">
+        
+        
 
         <div class="iconsandbuttons" fxLayoutAlign="space-between center">
-            <button [matMenuTriggerFor]="reminderMenu" class="iconbutton1" fxLayout="row"
+            <button [matMenuTriggerFor]="reminderMenu" class="iconbutton1" fxLayout="row" matTooltip="Reminder"
                 fxLayoutAlign="space-around center">
                 <img src="../../../assets/add_alert_black_24dp.svg" alt="">
 
@@ -34,7 +39,7 @@
                             <mat-datepicker #picker></mat-datepicker>
                         </mat-form-field>
 
-                        <button>save</button>
+                       
                     </mat-menu>
 
                     <button mat-menu-item>
@@ -47,19 +52,26 @@
         </div>
 
         <div class="iconsandbuttons">
-            <button class="iconbutton2" fxLayout="row" fxLayoutAlign="space-around center">
-                <img src="../../../assets/person_add_alt_black_24dp.svg" alt=""></button>
+            <button class="iconbutton2" fxLayout="row" fxLayoutAlign="space-around center" matTooltip="Add Person">
+                <img src="../../../assets/person_add_alt_black_24dp.svg" alt=""  (click)="addCollaborator(notecard)"></button>
 
         </div>
 
         <div class="iconsandbuttons">
-            <button [matMenuTriggerFor]="colorMenu" class="iconbutton3" fxLayout="row"
+            <button [matMenuTriggerFor]="colorMenu" class="iconbutton3" fxLayout="row" matTooltip="Color"
                 fxLayoutAlign="space-around center">
                 <img src="../../../assets/palette_black_24dp.svg" alt="">
             </button>
             <mat-menu #colorMenu="matMenu">
                 <button mat-menu-item>
-                    <button *ngFor="let noteColor of colors" mat-mini-fab [style.background]="noteColor?.bgColorValue"
+                    <button *ngFor="let noteColor of colors1" mat-mini-fab [style.background]="noteColor?.bgColorValue"
+                        (click)="changeColor(noteColor?.bgColorValue)">
+                    </button>
+                    <!-- <span (click)="changeColor()"></span>  -->
+                </button>
+                <br>
+                <button mat-menu-item>
+                    <button *ngFor="let noteColor of colors2" mat-mini-fab [style.background]="noteColor?.bgColorValue"
                         (click)="changeColor(noteColor?.bgColorValue)">
                     </button>
                     <!-- <span (click)="changeColor()"></span>  -->
@@ -69,14 +81,14 @@
         </div>
 
         <div class="iconsandbuttons">
-            <button class="iconbutton4" fxLayout="row" fxLayoutAlign="space-around center">
+            <button class="iconbutton4" fxLayout="row" fxLayoutAlign="space-around center" matTooltip="Photo">
                 <img src="../../../assets/insert_photo_black_24dp (1).svg" alt=""></button>
 
         </div>
 
         <div class="iconsandbuttons">
             <div *ngIf="showIcons">
-                <button class="iconbutton5" fxLayout="row" fxLayoutAlign="space-around center">
+                <button class="iconbutton5" fxLayout="row" fxLayoutAlign="space-around center" matTooltip="Unarchive">
                     <img src="../../../assets/archive_black_24dp (1).svg" (click)="Archivenote()" alt="">
                 </button>
             </div>
@@ -99,9 +111,25 @@
                     <span (click)="deletenote()">Delete note</span>
                     
                 </button>
+                <button mat-menu-item>
+                    
+                    <span (click)="openDialog(notecard)">Edit Label</span>
+                    
+                </button>
             </mat-menu>
+            
+            <!-- <div *ngFor="let label of labelArray">
+                <button mat-menu-item>
+                    <mat-list-item role="listitem" class="sidenavtxt" style="cursor: pointer;" (click)="getlabelById(label.labelId)">{{label.labelName}}</mat-list-item>
+                </button>
+                <button>
+                    <mat-list-item role="listitem" class="sidenavtxt" style="cursor: pointer;" (click)="openDialog(label)">Edit Label</mat-list-item>
+                </button>
+            </div> -->
+            
 
         </div>
+     
 
     </div>
 
@@ -116,3 +144,4 @@
     </div>
 
 </div>
+

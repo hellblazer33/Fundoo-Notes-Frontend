@@ -1,14 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { MatMenuModule } from '@angular/material/menu';
+import { SearchnotePipe } from 'src/app/pipe/searchnote.pipe';
 import { DashboardComponent } from './dashboard.component';
-
+import { RouterTestingModule } from '@angular/router/testing';
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
   let fixture: ComponentFixture<DashboardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DashboardComponent ]
+      imports: [RouterTestingModule,MatMenuModule],
+      declarations: [ DashboardComponent,SearchnotePipe ]
     })
     .compileComponents();
   });

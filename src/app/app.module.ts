@@ -49,8 +49,13 @@ import { TrashComponent } from './Components/trash/trash.component';
 import { ArchieveComponent } from './Components/archieve/archieve.component';
 import { SearchnotePipe } from './pipe/searchnote.pipe';
 import { TrashiconsComponent } from './Components/trashicons/trashicons.component';
+import { LabelComponent } from './Components/label/label.component';
+import { CollabnotesComponent } from './Components/collabnotes/collabnotes.component';
 // import { MatMomentDateModule } from "@angular/material-moment-adapter";
+import {MatTooltipModule} from '@angular/material/tooltip';
 
+import { AvatarModule } from 'ngx-avatar';
+import { AuthguardService } from './Components/authguardservice/authguard.service';
 
 
 @NgModule({
@@ -69,7 +74,10 @@ import { TrashiconsComponent } from './Components/trashicons/trashicons.componen
     ArchieveComponent,
     TrashComponent,
     SearchnotePipe,
-    TrashiconsComponent
+    TrashiconsComponent,
+    LabelComponent,
+    CollabnotesComponent,
+    
     
     
     
@@ -99,8 +107,8 @@ import { TrashiconsComponent } from './Components/trashicons/trashicons.componen
     MatDatepickerModule,
     MatNativeDateModule,
     // MatMomentDateModule
-    
-
+    AvatarModule,
+    MatTooltipModule
     
   ],
   providers: [],
